@@ -1,5 +1,8 @@
-$container-width: 1448px;
-$container-gutter: 1.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+$container-width: 1600px;
+$container-gutter: 8px;
 $bp-large: 1024px;
 
 @custom-media --large (min-width: $bp-large);
@@ -7,38 +10,70 @@ $bp-large: 1024px;
 :root {
   --blue-color: #12167a;
   --red-color: #ec1d2e;
-  --neutral-color: #44ee4e;
+  --neutral-color: #4e4e4e;
+  --color-white: #fff;
+  --pure-black: #000;
 
   /* Primary colors */
 
-  --primary__color: var(--blue-color);
-  --primary-10: #b9121d;
-  --primary-20: #d41727;
-  --primary-30: #740d15;
+  --primary__color: var(--blue-color);  
+  --primary-5: #e8e8e8;
+  --primary-10: #cfcfcf;
+  --primary-25: #9c9c9c;
+  --primary-60: #828282;     
+  --primary-90: #696969;
 
   /* Secondary colors */
 
   --secondary__color: var(--red-color);
+  --secondary-90: #d00505;
 
   /* Neutral colors */
   --text__color: var(--neutral-color);
+  --text__color__invert: var(--color-white);
+  --text__color__muted: var(--primary-010);
+
+  --success__color: #32D08D;
+  --error__color: #F14F39;
+  --warning__color: #F1B239;     
 
   /* Components */
 
   /* Links */
 
   --link__color: var(--primary__color);
-  --link__visited__color: var(--primary-10);
-  --link__hover__color: var(--primary-20);
-  --link__active__color: var(--primary-30);
+  --link__visited__color: #b9121d;
+  --link__hover__color: #D41727;
+  --link__active__color: #740D15;
 
   /* Buttons */
 
+  --button-primary__color: var(--color-white);
   --button-primary__background: var(--primary__color);
   --button-primary__background--hover: var(--secondary__color);
+  --button-primary__border: var(--color-white);
+  
+  --button-secondary__color: var(--secondary__color);
+  --button-secondary__bacground: var(--color-white);
+  --button-secondary__border: var(--secondary__color);
 
   /* Headings */
 
   --headings__type: "Anton", sans-serif;
   --body__type: "Open Sans", sans-serif;
+
+  /* Forms */
+
+  --input-background-color-default: var(--color-white);
+  --input-background-color-disabled: var(--primary-5);
+  
+  --input-border-color-default: var(--primary-25);
+  --input-border-color-focus: var(--neutral-color);
+  --input-border-color-error: var(--secondary__color);
+  
+  --form-label-color: #1A1A1A;
+  --form-placeholder : var(--primary-60);
+  --form-help-txt-color: var(--primary-90);
+
+  
 }

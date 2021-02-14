@@ -7,12 +7,12 @@ input {
   appearance: none;
   border-width: pxtorem(1px);
   border-style: solid;
-  border-color: var(--theme__color__primary__lighter);
+  border-color: var(--input-border-color-default);
   @mixin ui-default-transition border-color;
 
   &:focus {
     outline: none;
-    border-color: var(--theme__color__primary);
+    border-color: var(--input-border-color-focus);
   }
 
   @media (--large) {
@@ -36,7 +36,7 @@ textarea {
 
 select {
   position: relative;
-  background-image: url("../images/chevron-down.svg");
+  background-image: url("../../assets/img/Vector.jpg");
   background-position: center right pxtorem(12px);
   background-size: pxtorem(10px);
   background-repeat: no-repeat;
@@ -48,6 +48,16 @@ select {
   }
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+summary:focus {
+  outline: none;
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
 
@@ -55,5 +65,57 @@ input[type="number"] {
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+}
+
+.input {
+  display: inline-block;
+  width: 320px;
+  height: 42px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (--large) {
+    font-size: 16px;
+    height: 48px;
+  }
+}
+
+.select {
+  display: inline-block;
+  width: auto;
+  height: 42px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid var(--input-border-color-default);
+  color: var(--neutral-color);
+
+  @media (--large) {
+    font-size: 16px;
+    height: 48px;
+  }
+}
+
+input[type="checkbox"] {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  cursor: pointer;
+
+  &:checked {
+    color: #fff;
+    
+  }
+
+  @media (--large) {
+    font-size: 16px;
+    height: 48px;
   }
 }

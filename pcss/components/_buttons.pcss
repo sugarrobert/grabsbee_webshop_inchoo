@@ -9,14 +9,17 @@ button {
 
 .button {
   display: inline-block;
+  align-items: center;
   height: 42px;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
+  justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
   padding-left: pxtorem(12, 14);
   padding-right: pxtorem(12, 14);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   @mixin ui-default-transition all;
 
   @media (--large) {
@@ -43,4 +46,26 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+
+.button--secondary {
+  color: var(--secondary__color);
+  background: var(--button-secondary__bacground);
+  border: 1px solid var(--button-secondary__border);
+}
+
+.button--large {
+  width: 336px; 
+}
+
+.button--primary--disabled {
+  color: var(--color-white);
+  background: var(--primary-25);
+  border: 1px solid var(--color-white);
+}
+
+.button--secondary--disabled {
+  color: var(--primary-25);
+  background: var(--color-white);
+  border: 1px solid var(--primary-25);
 }

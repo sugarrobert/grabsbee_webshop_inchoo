@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Grabsbee - your frisbee web store</title>
   </head>
 
@@ -216,158 +217,143 @@
       </ul>
     </header>
 
-    <section>
-      <h1 tabindex="0">Ultimate Frisbees</h1>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="#" title="Grabsee Home">Home</a></li>
+          <li><a href="#" title="Grabsee Main Category">Freesbe</a></li>
+          <li tabindex="0">Ultimate Frisbee</></li>
+        </ul>
+      </nav>
 
-      <main>
+      <h1>Ultimate Frisbees</h1>
+
+      <section>
+        <button>Shop by <span class="icon-plus"></span></button>
+
         <div>
           <div>
-            <button>grid</button>
-            <button>list</button>
-            <p>12 items</p>
+            <li><button title="Grid View"><span class="icon-grid"></span></button></li>
+            <li><button title="List View"><span class="icon-list"></span></button></li>
           </div>
 
           <div>
-            <p>Sort by</p>
-            <select name="" id="">
+            <label>Sort products by:</label>
+            <select type="select" name="sort-by" id="sort-by">
               <option value="bestseller" selected>Bestseller</option>
-              <option value="price-low-to-high">Price: Low to High</option>
-              <option value="price-high-to-low">Price: High to Low</option>
+              <option value="price">Price</option>
             </select>
+            <button title="Set direction"><span class="icon-arrow-down"></span></button>
           </div>
         </div>
 
+        <ul>
+          <li>
+            <picture>
+              <img src="" alt="picture_1" />
+            </picture>
+            
+            <h2><a href="/productPage.html">Item name</a></h2>
+
+            <form action="">
+              <input type="hidden" name="product" value="">
+              <button type="submit" class="">Add to Cart</button>
+            </form>
+
+            <ul>
+              <li>
+                  <a href="" title="Add to wishlist"><span class="icon-heart"></span></a>
+              </li>
+              <li>
+                  <a href="" title="Add to Compare"><span class="icon-bar-chart"></span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
         <div>
-          <ul>
-            <li>
-              <picture>
-                <source srcset="" />
-                <source srcset="" />
-                <img src="" alt="picture_1" />
-              </picture>
-
-              <div>
-                <h3 tabindex="0">Item name</h3>
-
-                <button>Add to cart</button>
-                <div>
-                  <a href="">Add to Wishlist</a>
-                  <a href="">Add to Compare</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <picture>
-                <source srcset="" />
-                <source srcset="" />
-                <img src="" alt="picture_1" />
-              </picture>
-
-              <div>
-                <h3 tabindex="0">Item name</h3>
-
-                <button>Add to cart</button>
-                <div>
-                  <a href="">Add to Wishlist</a>
-                  <a href="">Add to Compare</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <picture>
-                <source srcset="" />
-                <source srcset="" />
-                <img src="" alt="picture_1" />
-              </picture>
-
-              <div>
-                <h3 tabindex="0">Item name</h3>
-
-                <button>Add to cart</button>
-                <div>
-                  <a href="">Add to Wishlist</a>
-                  <a href="">Add to Compare</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <picture>
-                <source srcset="" />
-                <source srcset="" />
-                <img src="" alt="picture_1" />
-              </picture>
-
-              <div>
-                <h3 tabindex="0">Item name</h3>
-
-                <button>Add to cart</button>
-                <div>
-                  <a href="">Add to Wishlist</a>
-                  <a href="">Add to Compare</a>
-                </div>
-              </div>
-            </li>
+          <ul class="pagination pagination__list">
+            <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
+            <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
           </ul>
-        </div>
 
-        <div>
-          <div>
-            <ol>
-              <li tabindex="0"></li>
-              <li tabindex="0"></li>
-              <li tabindex="0"></li>
-            </ol>
-          </div>
-
-          <div>
-            <p>Show</p>
-            <select name="" id="">
+          <div class="limiter">
+            <label for="limiter" id="limiter">Show</label>
+            <select name="limiter" id="limiter">
               <option value="4" selected>4</option>
               <option value="8">8</option>
               <option value="12">12</option>
             </select>
           </div>
         </div>
-      </main>
-      <aside>
-        <button>Shop by</button>
-        <div>
-          <p tabindex="0">Now shopping by</p>
-          <dl>
-            <dt tabindex="0">Style:</dt>
-            <dd tabindex="0">Full zip</dd>
-          </dl>
-          <button>Clear all filters</button>
-        </div>
-        <div>
-          <button>Close</button>
-          <h3 tabindex="0">Shopping Options</h3>
-          <ul>
-            <li>
-              <h4 tabindex="0">Color</h4>
-  
-              <div>
-                <ul>
-                  <li><a href="">Black</a></li>
-                  <li><a href="">Orange</a></li>
-                  <li><a href="">Blue</a></li>
-                  <li><a href="">White</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <h4 tabindex="0">Size</h4>
-            </li>
-            <li>
-              <h4 tabindex="0">Material</h4>
-            </li>
-            <li>
-              <h4 tabindex="0">Price</h4>
-            </li>
-          </ul>
-        </div>
-      </aside>
-    </section>
+      </section>
+    </main>
+    <aside>
+      <div>
+        <p tabindex="0">Now shopping by</p>
+        <dl>
+          <dt tabindex="0"><span class="icon-x-circle"></span> Style:</dt>
+          <dd tabindex="0">Full zip</dd>
+        </dl>
+        <button>Clear all filters</button>
+      </div>
+      <div>
+        <h2 tabindex="0">Shopping Options</h2>
+        <button><span class="icon-x-circle"></span> Close</button>
+        
+        <ul>
+          <li>
+            Color
+            <ul>
+              <li><a href="">Black</a></li>
+              <li><a href="">Orange</a></li>
+              <li><a href="">Blue</a></li>
+              <li><a href="">White</a></li>
+            </ul>
+          </li>
+          <li>
+            Size
+            <ul>
+              <li>
+                  <input type="checkbox" id="size_s" name="size_s">
+                  <label for="size_s">S</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="size_m" name="size_m">
+                  <label for="size_m">M</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="size_l" name="size_l">
+                  <label for="size_l">L</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Material
+            <ul>
+              <li>
+                  <input type="checkbox" id="material_pvc" name="material_pvc">
+                  <label for="material_pvc">Strong PVC</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="material_composit" name="material_composit">
+                  <label for="material_composit">Carbon</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Price
+            <ul>
+              <li>
+                  <input type="range" id="price_range" name="price_range">
+                  <label for="price_range">Select price range</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
     <footer>
       <section>
