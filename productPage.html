@@ -8,415 +8,431 @@
   </head>
 
   <body>
-    <header>
-      <h2>
-        <a href="">Grabsee Logo</a>
-      </h2>
+    <header class="header">
+      <div class="container header__content">
+        <h1 class="logo">
+          <img src="/assets/img/grabsbee.svg" alt="Grabsee Webshop logo" class="logo__img">
+        </h1>
 
-      <ul>
-        <li>
-          <button>Search</button>
+        <ul class="header__drawers-list">
+          <li class="header__drawers-list__item">
+            <button class="button--no-styles header__buttons">
+              <span class="icon-search"></span>
+              <span class="visualy-hidden">Search From Trigger</span>
+            </button>
 
-          <div>
-            <form>
-              <fieldset>
-                <legend tabindex="0">Grabsee search form</legend>
-                <label tabindex="0" for="search"
-                  >Enter here your search term</label
-                >
-                <input
-                  name="search"
-                  type="search"
-                  placeholder="Enter here your search term"
-                  aria-label="Search through site content"
-                />
-                <button>Search it</button>
-              </fieldset>
-            </form>
+            <div class="visualy-hidden">
+              <form>
+                <fieldset>
+                  <legend tabindex="0">Grabsee search form</legend>
+                  <label tabindex="0" for="search"
+                    >Enter here your search term</label
+                  >
+                  <input
+                    name="search"
+                    type="search"
+                    placeholder="Enter here your search term"
+                    aria-label="Search through site content"
+                  />
+                  <button>Search it</button>
+                </fieldset>
+              </form>
 
-            <button>Close</button>
-          </div>
-        </li>
-        <li>
-          <button>Mini Cart</button>
-
-          <section>
-            <header>
-              <p># item in Cart</p>
-            </header>
-
-            <ol>
-              <li>
-                <div>
-                  <img src="" alt="Item name 1" />
-                </div>
-
-                <div>
-                  <h2>
-                    <a href="">Item name 1</a>
-                  </h2>
-
-                  <dl>
-                    <dt tabindex="0">Color</dt>
-                    <dd tabindex="0">Black</dd>
-                    <dt tabindex="0">Price</dt>
-                    <dd tabindex="0">10$</dd>
-                    <dt tabindex="0">Qty:</dt>
-                    <dd>
-                      <form>
-                        <fieldset>
-                          <legend>Item qty control</legend>
-                          <label for="qty"></label>
-                          <input name="qty" type="number" />
-                        </fieldset>
-                      </form>
-                    </dd>
-                  </dl>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img src="" alt="Item name 2" />
-                </div>
-
-                <div>
-                  <h2>
-                    <a href="">Item name 2</a>
-                  </h2>
-
-                  <dl>
-                    <dt tabindex="0">Color</dt>
-                    <dd tabindex="0">Red</dd>
-                    <dt tabindex="0">Price</dt>
-                    <dd tabindex="0">12$</dd>
-                    <dt tabindex="0">Qty:</dt>
-                    <dd>
-                      <form>
-                        <fieldset>
-                          <legend>Item qty control</legend>
-                          <label for="qty"></label>
-                          <input name="qty" type="number" />
-                        </fieldset>
-                      </form>
-                    </dd>
-                  </dl>
-                </div>
-              </li>
-            </ol>
-
-            <table>
-              <caption>
-                Your Cart Totals table
-              </caption>
-              <tbody>
-                <tr>
-                  <th tabindex="0">Subtotal</th>
-                  <td tabindex="0">$$</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <div>
-              <button>Proceed to checkout</button>
-              <a href="" title="Back to Cart page">View and edit cart</a>
+              <button>Close</button>
             </div>
+          </li>
+          <li class="header__drawers-list__item">
+            <button class="button--no-styles header__buttons">
+              <span class="icon-shopping-cart"></span>
+              <span class="visualy-hidden">Cart</span>
+            </button>
 
-            <div>
-              <strong>You have no items in your shopping cart</strong>
-            </div>
-          </section>
-        </li>
-        <li>
-          <button>Navigation Trigger</button>
+            <section class="visualy-hidden">
+              <header>
+                <p># item in Cart</p>
+              </header>
 
-          <nav>
-            <ul>
-              <li>
-                <h2>Frisbees</h2>
+              <ol>
+                <li>
+                  <div>
+                    <img src="" alt="Item name 1" />
+                  </div>
 
-                <div>
-                  <h3 tabindex="0">Ultimate Frisbees</h3>
+                  <div>
+                    <h2>
+                      <a href="">Item name 1</a>
+                    </h2>
 
-                  <ul>
-                    <li><a href="">Innova Pulsar</a></li>
-                    <li><a href="">Xcom</a></li>
-                    <li><a href="">Aviator - Marvel Captian America</a></li>
-                  </ul>
-                </div>
+                    <dl>
+                      <dt tabindex="0">Color</dt>
+                      <dd tabindex="0">Black</dd>
+                      <dt tabindex="0">Price</dt>
+                      <dd tabindex="0">10$</dd>
+                      <dt tabindex="0">Qty:</dt>
+                      <dd>
+                        <form>
+                          <fieldset>
+                            <legend>Item qty control</legend>
+                            <label for="qty"></label>
+                            <input name="qty" type="number" />
+                          </fieldset>
+                        </form>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="" alt="Item name 2" />
+                  </div>
 
-                <div>
-                  <h3 tabindex="0">Recreational</h3>
+                  <div>
+                    <h2>
+                      <a href="">Item name 2</a>
+                    </h2>
 
-                  <ul>
-                    <li><a href="">Nite</a></li>
-                    <li><a href="">Yikin</a></li>
-                  </ul>
-                </div>
+                    <dl>
+                      <dt tabindex="0">Color</dt>
+                      <dd tabindex="0">Red</dd>
+                      <dt tabindex="0">Price</dt>
+                      <dd tabindex="0">12$</dd>
+                      <dt tabindex="0">Qty:</dt>
+                      <dd>
+                        <form>
+                          <fieldset>
+                            <legend>Item qty control</legend>
+                            <label for="qty"></label>
+                            <input name="qty" type="number" />
+                          </fieldset>
+                        </form>
+                      </dd>
+                    </dl>
+                  </div>
+                </li>
+              </ol>
 
-                <div>
-                  <h3 tabindex="0">Contact us</h3>
+              <table>
+                <caption>
+                  Your Cart Totals table
+                </caption>
+                <tbody>
+                  <tr>
+                    <th tabindex="0">Subtotal</th>
+                    <td tabindex="0">$$</td>
+                  </tr>
+                </tbody>
+              </table>
 
-                  <ul>
-                    <li tabindex="0">Trg Slobode 6</li>
-                    <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-                    <li>
-                      <a href="mailto:filip.svetlicic@gmail.com"
-                        >filip.svetlicic@gmail.com</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <h2>Clothing</h2>
+              <div>
+                <button>Proceed to checkout</button>
+                <a href="" title="Back to Cart page">View and edit cart</a>
+              </div>
 
-                <div>
-                  <h3 tabindex="0">Ultimate Frisbees</h3>
+              <div>
+                <strong>You have no items in your shopping cart</strong>
+              </div>
+            </section>
+          </li>
+          <li class="header__drawers-list__item">
+            <button class="button--no-styles header__buttons">
+              <span class="icon-menu"></span>
+              <span class="visualy-hidden">Navigation Trigger</span>
+            </button>
 
-                  <ul>
-                    <li><a href="">Innova Pulsar</a></li>
-                    <li><a href="">Xcom</a></li>
-                    <li><a href="">Aviator - Marvel Captian America</a></li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 tabindex="0">Recreational</h3>
-
-                  <ul>
-                    <li><a href="">Nite</a></li>
-                    <li><a href="">Yikin</a></li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 tabindex="0">Contact us</h3>
-
-                  <ul>
-                    <li tabindex="0">Trg Slobode 6</li>
-                    <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-                    <li>
-                      <a href="mailto:filip.svetlicic@gmail.com"
-                        >filip.svetlicic@gmail.com</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <h2>Accessories</h2>
-              </li>
-              <li>
-                <h2>Contact us</h2>
-              </li>
-            </ul>
-
-            <button>Close Nav</button>
-          </nav>
-        </li>
-      </ul>
-    </header>
-
-    <main>
-      <section>
-        <div>
-          <div>
-            <picture>
-              <source srcset="" />
-              <source srcset="" />
-              <img src="" alt="picture_1" />
-            </picture>
-            <div>
+            <nav class="visualy-hidden">
               <ul>
                 <li>
-                  <picture>
-                    <source srcset="" />
-                    <source srcset="" />
-                    <img src="" alt="picture_1" />
-                  </picture>
+                  <h2>Frisbees</h2>
+
+                  <div>
+                    <h3 tabindex="0">Ultimate Frisbees</h3>
+
+                    <ul>
+                      <li><a href="">Innova Pulsar</a></li>
+                      <li><a href="">Xcom</a></li>
+                      <li><a href="">Aviator - Marvel Captian America</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 tabindex="0">Recreational</h3>
+
+                    <ul>
+                      <li><a href="">Nite</a></li>
+                      <li><a href="">Yikin</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3>Contact us</h3>
+
+                    <ul>
+                      <li tabindex="0">Trg Slobode 6</li>
+                      <li><a href="tel:+385958811630">+385 95 8811630</a></li>
+                      <li>
+                        <a href="mailto:filip.svetlicic@gmail.com"
+                          >filip.svetlicic@gmail.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
-                  <picture>
-                    <source srcset="" />
-                    <source srcset="" />
-                    <img src="" alt="picture_2" />
-                  </picture>
+                  <h2>Clothing</h2>
+
+                  <div>
+                    <h3 tabindex="0">Ultimate Frisbees</h3>
+
+                    <ul>
+                      <li><a href="">Innova Pulsar</a></li>
+                      <li><a href="">Xcom</a></li>
+                      <li><a href="">Aviator - Marvel Captian America</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3>Recreational</h3>
+
+                    <ul>
+                      <li><a href="">Nite</a></li>
+                      <li><a href="">Yikin</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 tabindex="0">Contact us</h3>
+
+                    <ul>
+                      <li tabindex="0">Trg Slobode 6</li>
+                      <li><a href="tel:+385958811630">+385 95 8811630</a></li>
+                      <li>
+                        <a href="mailto:filip.svetlicic@gmail.com"
+                          >filip.svetlicic@gmail.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
-                  <picture>
-                    <source srcset="" />
-                    <source srcset="" />
-                    <img src="" alt="picture_3" />
-                  </picture>
+                  <h2>Accessories</h2>
+                </li>
+                <li>
+                  <h2>Contact us</h2>
                 </li>
               </ul>
-            </div>
+
+              <button>Close Nav</button>
+            </nav>
+          </li>
+        </ul>
+      </div>  
+    </header>
+
+    <main class="container">
+      <ul class="breadcrumb" aria-label="breadcrumb">
+        <li class="breadcrumb__item" aria-label="breadcrumb">
+            <a class="breadcrumb__link" href="#" title="Grabsee Home">Home</a>
+        </li>
+        <li>
+          <span class="icon-chevron-right breadcrumb__vector"></span>
+        </li>
+        <li class="breadcrumb__item" aria-label="breadcrumb">
+            <a class="breadcrumb__link" href="#" title="Grabsee Main Category">Freesbe</a>
+        </li>
+        <span class="icon-chevron-right breadcrumb__vector"></span>
+        <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0"><strong>Ultimate Frisbee</strong></li>
+      </ul>
+      <div">
+        <div class="product-page-slider">
+          <picture>
+            <source srcset="" />
+            <source srcset="" />
+            <img src="/assets/img/product-page/slider/image 4.jpg" alt="picture_1" />
+          </picture>
+          <ul  class="product-page-slider-list">
+            <li class="product-page-slider-list__item">
+              <picture>
+                <source srcset="" />
+                <source srcset="" />
+                <img src="/assets/img/product-page/slider/Rectangle 78.jpg" alt="picture_1" />
+              </picture>
+            </li>
+            <li class="product-page-slider-list__item">
+              <picture>
+                <source srcset="" />
+                <source srcset="" />
+                <img src="/assets/img/product-page/slider/Rectangle 79.jpg" alt="picture_2" />
+              </picture>
+            </li>
+            <li class="product-page-slider-list__item">
+              <picture>
+                <source srcset="" />
+                <source srcset="" />
+                <img src="/assets/img/product-page/slider/Rectangle 80.jpg" alt="picture_3" />
+              </picture>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h1 tabindex="0" class="product__title">Inova Pulsar | Major League Ultimate Championship 175 Gram Flying Disc Ultrasta</h1>
+          <div class="product__stock">
+            <p class="product__stock-p">In Stock</p>
+            <p class="product__stock-p"><strong>SKU</strong> WH12</p>
           </div>
-
-          <div>
-            <h1 tabindex="0">Inova Pulsar</h1>
-
-            <dl>
-              <dt tabindex="0">In Stock</dt>
-              <dd tabindex="0">SKU: WH12</dd>
-              <dt tabindex="0">Be the first to review this product</dt>
-              <dt tabindex="0">As low as:</dt>
-              <dd tabindex="0">$68.99</dd>
-              <dt tabindex="0">Color</dt>
-              <dd tabindex="0">
-                <label for="black"></label>
-                <input type="color" id="" name="black" value="#000000" disabled/>
-              </dd>
-              <dd tabindex="0">
-                <label for="blue"></label>
-                <input type="color" id="" name="blue" value="#1857f7" disabled/>
-              </dd>
-              <dd tabindex="0">
-                <label for="purple"></label>
-                <input type="color" id="" name="purple" value="#ef3dff" disabled/>
-              </dd>
-              <div>
-                <dt tabindex="0">Qty:</dt>
-                <dd>
-                  <form action="">
-                    <fieldset>
-                      <legend>Item qty control</legend>
-                      <label for="qty"></label>
-                      <input name="qty" type="number" />
-                    </fieldset>
-                  </form>
+          <small class="product__review">Be the first to review this product</small>
+          
+          <div class="price-box">
+            <span>As low as:</span>
+            <span><strong>$21.99</strong></span>
+          </div>
+          
+          <form action="">
+            <dl class="product__color">
+              <dt tabindex="0" class="product__color__title">Color</dt>
+              <div class="product__color-list">
+                <dd tabindex="0">
+                  <label for="black"></label>
+                  <input type="color" class="input-color" id="" name="black" value="#000000" disabled/>
                 </dd>
-                <button>Add to cart</button>
-              </div>
-              <div>
-                <a href="">Add to Wishlist</a>
-                <a href="">Add to Compare</a>
-              </div>
+                <dd tabindex="0">
+                  <label for="blue"></label>
+                  <input type="color" class="input-color" id="" name="blue" value="#1857f7" disabled/>
+                </dd>
+                <dd tabindex="0">
+                  <label for="purple"></label>
+                  <input type="color" class="input-color" id="" name="purple" value="#ef3dff" disabled/>
+                </dd>
+              </div>  
             </dl>
-          </div>
-        </div>
 
-        <div>
-          <details>
-            <summary><h2>Details</h2></summary>
-            <p tabindex="0">Keep shivers at by with the Circle Hooded Ice Fleece. Ultra-thick, high-pile fleece traps your body heat and keeps cold outside. The drawstring hood and ribbed details add extra cozziness and touches of class style. Its relaxed fit it loose enough to layer comfortable over your shirt</p>
+            <fieldset class="product__qty">
+              <legend>Qty: </legend>
+              <label for="qty"></label>
+              <input name="qty" type="number" class="product__qty__input"/>
+            </fieldset>
 
-            <ul>
-              <li tabindex="0">Full-zip front.</li>
-              <li tabindex="0">Three-panel hood.</li>
-              <li tabindex="0">Flatlock seams throught.</li>
-              <li tabindex="0">Wel hand pockets.</li>
-              <li tabindex="0">Machine wash/dry</li>
+            <button class="button button--primary button--large">Add to cart</button>
+
+            <ul class="product__wishlist">
+              <li>
+                  <a href="" title="Add to wishlist" class="product__wishlist__item">
+                      <span class="icon-heart"></span> Add to Wishlist</a>
+              </li>
+              <li>
+                  <a href="" title="Add to Compare" class="product__wishlist__item">
+                      <span class="icon-bar-chart"></span> Add to Compare</a>
+              </li>
             </ul>
-          </details>
-
-          <details>
-            <summary><h2>More Information</h2></summary>
-            <table>
-              <tbody>
-                <tr>
-                  <th tabindex="0">Style:</th>
-                  <td tabindex="0">Insulated, Heavy Duty, Soft Shell, 1/4 zip</td>
-                </tr>
-                <tr>
-                  <th tabindex="0">Material:</th>
-                  <td tabindex="0">Fleece, Polyester, wool</td>
-                </tr>
-                <tr>
-                  <th tabindex="0">Pattern:</th>
-                  <td tabindex="0">Solid</td>
-                </tr>
-                <tr>
-                  <th tabindex="0">Climate:</th>
-                  <td tabindex="0">All-Weather, Cool, Indoor, Spring</td>
-                </tr>
-              </tbody>
-            </table>
-          </details>
+          </form>
         </div>
+      </div>
+      <section>
+        <details class="product__details">
+            <summary>
+                <h2 aria-labeledby="" aria-controls="details" aria-selected="" aria-expanded="true" tabindex="0" class="product__details__title">Details <span class="icon-chevron-down product__details__icon"></span></h2>
+            </summary>
+            <div aria-labelledby="" tabindex="0">
+                <p>Note: Stamp colour on disc may vary from pictured image.</p>
+                <p>This is not a Frisbee its a quality Flying Disc, if you dont know the difference think of the Frisbee as a toy and a Flying Disc as a quality piece of sports equipment.</p>
+                <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
+            </div>
+        </details>
+        
+        <details>
+            <summary>
+                <h2 aria-labeledby="" aria-controls="description" aria-selected="" aria-expanded="true" tabindex="0" class="product__details__title">More information <span class="icon-chevron-down product__details__icon"></span></h2>
+            </summary>
 
-        <div>
-          <p>Note: Stamp color on disc my cary from pictured image</p>
-          <p>
-            This is not a frisbee its a quality Flying Disc, if you dont
-            know diffrence think of Frisbee as a toy and a Flying Disc as
-            a quality oice of sports equioment
-          </p>
-          <p>
-            USA Ultimate approved for tournament play, the Pulsar is the
-            official disc of Major League Ultimate. This disc is not just
-            a competition disc. It is also perfect for freestyling at the
-            beach or for a game of throw and catch in the backyard or
-            park. The Pulsar is also approved for Super Class and PDGA
-            disc golf use.
-          </p>
-        </div>
+            <div aria-labelledby="" tabindex="0">
+                <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
+            </div>
+        </details>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <h2>Newsletter</h2>
-        <p tabindex="0">
-          Sign up for our newsletter and be the first to find out about new
-          products, discounts and more.
-        </p>
+    <footer class="footer">
+      <section class="newsletter__content">
+        <div class="container">
+          <h2 class="footer__title">Newsletter</h2>
+          <p tabindex="0">
+            Sign up for our newsletter and be the first to find out about new
+            products, discounts and more.
+          </p>
 
-        <form action="">
-          <fieldset>
-            <legend>Grabsee Newsletter Form</legend>
-            <label for="newsletter" tabindex="0"
-              >Enter your email in order to become the Grabsee subscriber</label
-            >
-
-            <input
-              placeholder="Enter your email address"
-              name="newsletter"
-              type="email"
-            />
-            <button class="button button--primary">Subscibe</button>
-          </fieldset>
-        </form>
-      </section>
-
-      <section>
-        <details open>
-          <summary><h2>Categories</h2></summary>
-
-          <ul>
-            <li>
-              <a href="">Frisbee</a>
-            </li>
-            <li>
-              <a href="">Gear</a>
-            </li>
-            <li>
-              <a href="">Accessories</a>
-            </li>
-            <li>
-              <a href="">Gifts</a>
-            </li>
-          </ul>
-        </details>
-
-        <details>
-          <summary><h2>Contact us</h2></summary>
-
-          <ul>
-            <li tabindex="0"><address>Trg Slobode 6</address></li>
-            <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-            <li>
-              <a href="mailto:filip.svetlicic@gmail.com"
-                >filip.svetlicic@gmail.com</a
+          <form action="">
+            <fieldset>
+              <legend class="visualy-hidden">Grabsee Newsletter Form</legend>
+              <label class="visualy-hidden" for="newsletter" tabindex="0"
+                >Enter your email in order to become the Grabsee
+                subscriber</label
               >
-            </li>
-          </ul>
-        </details>
+              <input
+                placeholder="Enter your email address"
+                name="newsletter"
+                type="email"
+                class="input footer__input"
+              />
+              <button class="button button--primary button--large" type="submit">
+                Subscibe
+              </button>
+            </fieldset>
+          </form>
+        </div>
       </section>
 
-      <div>
-        <small tabindex="0">Copyright &reg; 2021 Grabsbee</small>
+      <section class="summary__content">
+        <div class="container">
+          <details class="footer__details">
+            <summary class="footer__summary">
+              <h2 class="footer__title footer__summary-title">Categories</h2>
+            </summary>
+
+            <ul class="">
+              <li>
+                <a class="summary__links" href="">Frisbee</a>
+              </li>
+              <li>
+                <a class="summary__links" href="">Gear</a>
+              </li>
+              <li>
+                <a class="summary__links" href="">Accessories</a>
+              </li>
+              <li>
+                <a class="summary__links" href="">Gifts</a>
+              </li>
+            </ul>
+          </details>
+
+          <details class="footer__details">
+            <summary class="footer__summary">
+              <h2 class="footer__title footer__summary-title">Contact us</h2>
+            </summary>
+
+            <ul>
+              <li tabindex="0"><address class="summary__links">Trg Slobode 6</address></li>
+              <li>
+                <a class="summary__links" href="tel:+385958811630"
+                  >+385 95 8811630</a
+                >
+              </li>
+              <li>
+                <a
+                  class="summary__links"
+                  href="mailto:filip.svetlicic@gmail.com"
+                  >filip.svetlicic@gmail.com</a
+                >
+              </li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <div class="container copyright">
+        <small class="copyright__text" tabindex="0"
+          >Copyright &reg; 2021 Grabsbee</small
+        >
       </div>
-    </footer>
+    </footer>  
   </body>
 </html>

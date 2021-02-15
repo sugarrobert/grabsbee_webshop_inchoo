@@ -60,6 +60,21 @@ summary:focus {
 
 input[type="number"] {
   -moz-appearance: textfield;
+  display: inline-block;
+  width: 63px;
+  height: 42px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid var(--input-border-color-default);
+  color: var(--neutral-color);
+
+  @media (--large) {
+    font-size: 16px;
+    height: 48px;
+  }
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
@@ -118,4 +133,12 @@ input[type="checkbox"] {
     font-size: 16px;
     height: 48px;
   }
+}
+
+.input-color {
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 28px;
+  height: 18px;
 }
