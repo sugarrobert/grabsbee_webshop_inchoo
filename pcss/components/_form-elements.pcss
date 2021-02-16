@@ -41,7 +41,7 @@ select {
   background-size: pxtorem(10px);
   background-repeat: no-repeat;
   background-color: transparent;
-  padding-right: pxtorem(24px);
+  padding-right: pxtorem(30px);
 
   &::-ms-expand {
     display: none;
@@ -117,16 +117,28 @@ input[type="number"] {
   }
 }
 
-input[type="checkbox"] {
+.checkbox {
   position: relative;
   height: 16px;
   width: 16px;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 
   &:checked {
-    color: #fff;
-    
+    &:after {
+      @mixin icon-font-display "\e908";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      color: var(--color-white);
+      background: var(--secondary__color);
+      font-size: 10px;
+      line-height: 1.2;
+    }
   }
 
   @media (--large) {
@@ -141,4 +153,9 @@ input[type="checkbox"] {
   padding: 0;
   width: 28px;
   height: 18px;
+}
+
+.range {
+  -webkit-appearance: auto;
+  width: pxtorem(100px);
 }
