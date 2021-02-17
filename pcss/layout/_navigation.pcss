@@ -1,0 +1,123 @@
+.aside {
+  position: absolute;
+  width: pxtorem(360px);
+  top: 0;
+  right: 0;
+  background: var(--color-white);
+}
+
+.nav {
+  position: absolute;
+  width: pxtorem(360px);
+  top: 0;
+  right: 0;
+  background: var(--color-white);
+  z-index: 2;
+}
+
+.search {
+  position: absolute;
+  width: pxtorem(360px);
+  top: 0;
+  right: 0;
+  background: var(--color-white);
+  z-index: 2;
+}
+
+.menu-button {
+  position: absolute;
+  top: pxtorem(15px);
+  right: pxtorem(25px);
+  font-size: pxtorem(14px);
+  line-height: pxtorem(21px);
+  color: var(--text__color);
+  
+}
+
+.menu-button__append {
+  position: absolute;
+  top: pxtorem(2px);
+  padding-left: pxtorem(5px);
+}
+
+.menu-title {
+  padding-top: pxtorem(72px);
+  font-family: var(--body__type);
+  font-style: normal;
+  font-weight: bold;
+  font-size: pxtorem(14px);
+  line-height: pxtorem(24px);
+  text-transform: uppercase;
+  color: var(--primary__color);
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu__list-item {
+  font-family: var(--body__type);
+  font-style: normal;
+  font-weight: bold;
+  font-size: pxtorem(12px);
+  line-height: pxtorem(24px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text__color);
+  position: relative;
+  border-bottom: pxtorem(1px) solid var(--primary-10);
+  padding-bottom: pxtorem(18px);
+  margin: 0;
+
+  &:before {
+    @mixin icon-font-display "\e909";
+    position: absolute;
+    right: 0;
+  }
+}
+
+.menu__list-item-icon {
+  padding: 0 pxtorem(5px);
+}
+
+.menu__list--second {
+
+}
+
+.menu__list-item--second {
+  padding: pxtorem(10px);
+  display: flex;
+  align-items: center;
+  font-family: var(--body__type);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.menu__list-item--second-link {
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--text__color);
+}
+
+.menu__list--third {
+  padding-left: pxtorem(30px);
+  padding-bottom: pxtorem(10px);
+}
+
+.menu__list-item--third {
+
+}
+
+.menu__list-item--third-link {
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--text__color);
+  font-size: pxtorem(11px);
+}
