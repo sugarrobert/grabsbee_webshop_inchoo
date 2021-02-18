@@ -21,24 +21,24 @@
               <span class="visualy-hidden">Search From Trigger</span>
             </button>
 
-            <div class="search visualy-hidden">
+            <div class="search container visualy-hidden">
               <form>
-                <fieldset>
-                  <legend tabindex="0">Grabsee search form</legend>
-                  <label tabindex="0" for="search"
+                <fieldset class="search-form">
+                  <legend tabindex="0" class="visualy-hidden">Grabsee search form</legend>
+                  <label tabindex="0" for="search" class="visualy-hidden"
                     >Enter here your search term</label
                   >
                   <input
                     name="search"
                     type="search"
                     placeholder="Enter here your search term"
-                    aria-label="Search through site content"
+                    aria-label="Search through site content" class="input search-input"
                   />
-                  <button>Search it</button>
+                  <button class=""><span class="icon-search"></span></button>
                 </fieldset>
               </form>
 
-              <button>Close</button>
+              <button class="menu-button search-buton">Close <span class="icon-x-circle menu-button__append"></span></button>
             </div>
           </li>
           <li class="header__drawers-list__item">
@@ -47,32 +47,33 @@
               <span class="visualy-hidden">Cart</span>
             </button>
 
-            <section class="visualy-hidden">
-              <header>
-                <p># item in Cart</p>
-              </header>
+            <section class="container cart visualy-hidden">
+              <h2 class="menu-title cart-title"># item in Cart</h2>
 
-              <ol>
-                <li>
-                  <div>
-                    <img src="" alt="Item name 1" />
+              <button class="close-button">Close <span class="icon-x-circle close-button__append"></span></button>
+        
+              <ol class="list-template-layout">
+                <li class="cart-list__item">
+                  <div class="cart-list__item--img">
+                    <img src="/assets/img/home-page/cart/black.jpg" alt="Item name 1" />
                   </div>
 
-                  <div>
-                    <h2>
-                      <a href="">Item name 1</a>
+                  <div class="cart-list__item--wraper">
+                    <h2 class="cart-list__item--title">
+                      <a href="" class="cart-list__item--title__link">Innova Pulsar | 
+                        Major League Ultimate ...</a>
                     </h2>
 
-                    <dl>
-                      <dt tabindex="0">Color</dt>
-                      <dd tabindex="0">Black</dd>
-                      <dt tabindex="0">Price</dt>
-                      <dd tabindex="0">10$</dd>
-                      <dt tabindex="0">Qty:</dt>
+                    <dl class="cart-list__second">
+                      <dt tabindex="0" class="cart-list__second-item">Color:</dt>
+                      <dd tabindex="0" class="cart-list__second-item-description">Black</dd>
+                      <dt tabindex="0" class="cart-list__second-item">Price:</dt>
+                      <dd tabindex="0" class="cart-list__second-item-description">21.99$</dd>
+                      <dt tabindex="0" class="cart-list__second-item">Qty:</dt>
                       <dd>
                         <form>
                           <fieldset>
-                            <legend>Item qty control</legend>
+                            <legend class="visualy-hidden">Item qty control</legend>
                             <label for="qty"></label>
                             <input name="qty" type="number" />
                           </fieldset>
@@ -80,59 +81,36 @@
                       </dd>
                     </dl>
                   </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="" alt="Item name 2" />
-                  </div>
-
-                  <div>
-                    <h2>
-                      <a href="">Item name 2</a>
-                    </h2>
-
-                    <dl>
-                      <dt tabindex="0">Color</dt>
-                      <dd tabindex="0">Red</dd>
-                      <dt tabindex="0">Price</dt>
-                      <dd tabindex="0">12$</dd>
-                      <dt tabindex="0">Qty:</dt>
-                      <dd>
-                        <form>
-                          <fieldset>
-                            <legend>Item qty control</legend>
-                            <label for="qty"></label>
-                            <input name="qty" type="number" />
-                          </fieldset>
-                        </form>
-                      </dd>
-                    </dl>
+                  <div class="cart-action">
+                    <span class="icon-edit cart-action-icon"></span>
+                    <span class="icon-trash cart-action-icon"></span>
                   </div>
                 </li>
               </ol>
 
-              <table>
-                <caption>
+              <table class="cart-table">
+                <caption class="visualy-hidden">
                   Your Cart Totals table
                 </caption>
                 <tbody>
-                  <tr>
-                    <th tabindex="0">Subtotal</th>
-                    <td tabindex="0">$$</td>
+                  <tr class="cart-table__list">
+                    <th tabindex="0" class="cart-table__list-th">Cart Subtotal</th>
+                    <td tabindex="0" class="cart-table__list-td">$49.99</td>
                   </tr>
                 </tbody>
               </table>
 
-              <div>
-                <button>Proceed to checkout</button>
-                <a href="" title="Back to Cart page">View and edit cart</a>
+              <div class="flex-center">
+                <button class="button button--primary button--large">Proceed to checkout</button>
+                <a href="" title="Back to Cart page" class="edit-cart-link">View and edit cart</a>
               </div>
 
               <div>
-                <strong>You have no items in your shopping cart</strong>
+                <strong class="menu-title cart-title">You have no items in your shopping cart</strong>
               </div>
             </section>
           </li>
+          
           <li class="header__drawers-list__item">
             <button class="button--no-styles header__buttons">
               <span class="icon-menu"></span>

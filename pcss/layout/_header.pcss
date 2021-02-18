@@ -23,3 +23,139 @@
 .logo {
   margin-bottom: 0;
 }
+
+.search-buton {
+  top: pxtorem(30px);
+  right: 50%;
+  color: var(--color-white);
+}
+
+.search {
+  color: var(--color-white);
+  background: var(--primary__color);
+  width: 100%;
+  height: 147px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: pxtorem(65px);
+  border-bottom: pxtorem(1px) solid var(--secondary__color);
+}
+
+.search-input {
+  border: none;
+  color: var(--color-white);
+  background: var(--primary__color);
+  padding: 0 5px;
+  width: 100%;
+  
+  &::placeholder {
+    color: var(--color-white); 
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 6px;
+  }
+}
+
+.cart-title {
+  color: var(--text__color);
+}
+
+.cart-list__item {
+  position: relative;
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.cart-list__item--img {
+  padding-right: pxtorem(20px); 
+}
+
+.cart-list__item--wraper {
+  
+}
+
+.cart-list__item--title {
+  font-family: var(--body__type);
+  font-style: normal;
+  font-weight: bold;
+  font-size: pxtorem(14px);
+  line-height: pxtorem(24px);
+  text-transform: uppercase;
+  margin-bottom: pxtorem(10px);
+}
+
+.cart-list__item--title__link {
+  color: var(--secondary__color);
+  text-decoration: none;
+}
+
+.cart-list__second {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+}
+
+.cart-list__second-item {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 5px;
+}
+
+.cart-list__second-item-description {
+  font-size: 12px;
+  line-height: 21px;
+}
+
+.cart-action {
+  @mixin absolute auto, 10px, 10px, auto;
+}
+
+.cart-action-icon {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.cart-table {
+  margin: 20px 0px 10px;
+}
+
+.cart-table__list {
+  border-top: 1px solid var(--primary__color);
+  border-bottom: 1px solid var(--primary__color);
+}
+
+.cart-table__list-th{
+  padding: pxtorem(10px) 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.cart-table__list-td{
+  padding: pxtorem(10px) 0;
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.flex-center {
+  @mixin flex column, center, center, nowrap;
+}
+
+.edit-cart-link {
+  text-decoration: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #EC1D2E;
+  padding: 20px;
+}

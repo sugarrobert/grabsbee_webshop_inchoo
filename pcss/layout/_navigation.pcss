@@ -15,6 +15,13 @@
   z-index: 2;
 }
 
+.cart {
+  @mixin absolute 0, 0;
+  width: 100%;
+  background: var(--color-white);
+  z-index: 2;
+}
+
 .search {
   position: absolute;
   width: pxtorem(360px);
@@ -22,22 +29,6 @@
   right: 0;
   background: var(--color-white);
   z-index: 2;
-}
-
-.menu-button {
-  position: absolute;
-  top: pxtorem(15px);
-  right: pxtorem(25px);
-  font-size: pxtorem(14px);
-  line-height: pxtorem(21px);
-  color: var(--text__color);
-  
-}
-
-.menu-button__append {
-  position: absolute;
-  top: pxtorem(2px);
-  padding-left: pxtorem(5px);
 }
 
 .menu-title {
@@ -120,4 +111,8 @@
   text-decoration: none;
   color: var(--text__color);
   font-size: pxtorem(11px);
+}
+
+.cart-table {
+  
 }
