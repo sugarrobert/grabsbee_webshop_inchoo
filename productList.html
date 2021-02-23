@@ -228,156 +228,300 @@
       </div>  
     </header>
 
-    <main class="container">
-      <nav>
-        <ul class="breadcrumb" aria-label="breadcrumb">
-          <li class="breadcrumb__item" aria-label="breadcrumb">
-              <a class="breadcrumb__link" href="#" title="Grabsee Home">Home</a>
-          </li>
-          <li>
+    <div class="container product-list__container-grid">
+      <main class="product-list__container-grid main-container-grid">
+        <nav class="lg-nav__breadcrumb-grid">
+          <ul class="breadcrumb" aria-label="breadcrumb">
+            <li class="breadcrumb__item" aria-label="breadcrumb">
+                <a class="breadcrumb__link" href="#" title="Grabsee Home">Home</a>
+            </li>
+            <li>
+              <span class="icon-chevron-right breadcrumb__vector"></span>
+            </li>
+            <li class="breadcrumb__item" aria-label="breadcrumb">
+                <a class="breadcrumb__link" href="#" title="Grabsee Main Category">Freesbe</a>
+            </li>
             <span class="icon-chevron-right breadcrumb__vector"></span>
-          </li>
-          <li class="breadcrumb__item" aria-label="breadcrumb">
-              <a class="breadcrumb__link" href="#" title="Grabsee Main Category">Freesbe</a>
-          </li>
-          <span class="icon-chevron-right breadcrumb__vector"></span>
-          <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0"><strong>Ultimate Frisbee</strong></li>
-        </ul>
-      </nav>
+            <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0"><strong>Ultimate Frisbee</strong></li>
+          </ul>
+        </nav>
 
-      <h1 class="product-list__title">Ultimate Frisbees</h1>
+        <h1 class="product-list__title lg-product-list__title-grid">Ultimate Frisbees</h1>
 
-      <section>
-        <button class="button button--secondary">Shop by <span class="icon-plus-circle"></span></button>
+        <section class="lg-product-list__grid-wrapper">
+          <button class="button button--secondary visualy-hidden--desktop">Shop by <span class="icon-plus-circle"></span></button>
 
-        <div class="shopping-options">
-          <p tabindex="0" class="shopping-options__title">Now shopping by</p>
-          <dl class="shopping-options__list">
-            <dt tabindex="0" class="shopping-options__list__item"><span class="icon-x-circle shopping-options__list__item-icon"></span> Style:</dt>
-            <dd tabindex="0" class="shopping-options__list__item-description">Full zip</dd>
-          </dl>
-          <button class="shopping-options__button">Clear all filters</button>
-        </div>
-
-        <div class="toolbar">
-          <div class="toolbar__icons">
-            <li class="toolbar__icons__item"><button title="Grid View" class="button button--primary"><span class="icon-grid"></span></button></li>
-            <li class="toolbar__icons__item"><button title="List View" class="button button--secondary"><span class="icon-list"></span></button></li>
+          <div class="shopping-filter visualy-hidden--desktop">
+            <p tabindex="0" class="shopping-filter__title">Now shopping by</p>
+            <dl class="shopping-filter__list">
+              <dt tabindex="0" class="shopping-filter__list__item"><span class="icon-x-circle shopping-filter__list__item-icon"></span> Style:</dt>
+              <dd tabindex="0" class="shopping-filter__list__item-description">Full zip</dd>
+            </dl>
+            <button class="shopping-filter__button">Clear all filters</button>
           </div>
 
-          <div>
-            <label class="visualy-hidden">Sort products by:</label>
-            <select class="select" type="select" name="sort-by" id="sort-by">
-              <option value="bestseller" selected>Bestseller</option>
-              <option value="price">Price</option>
-            </select>
-            <button title="Set direction"><span class="icon-arrow-down"></span></button>
+          <div class="toolbar">
+            <div class="toolbar__icons">
+              <li class="toolbar__icons__item"><button title="Grid View" class="button button--primary"><span class="icon-grid"></span></button></li>
+              <li class="toolbar__icons__item"><button title="List View" class="button button--secondary"><span class="icon-list"></span></button></li>
+            </div>
+
+            <div>
+              <label class="visualy-hidden">Sort products by:</label>
+              <select class="select" type="select" name="sort-by" id="sort-by">
+                <option value="bestseller" selected>Bestseller</option>
+                <option value="price">Price</option>
+              </select>
+              <button title="Set direction"><span class="icon-arrow-down"></span></button>
+            </div>
           </div>
-        </div>
 
-        <ul class="product__grid">
-          <li class="product__grid__item">
-            <picture>
-              <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
-            </picture>
-            
-            <h2><a href="/productPage.html" class="product__title">INNOVA PULSAR ...</a></h2>
+          <ul class="product__grid">
+            <li class="product__grid__item">
+              <picture>
+                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+              </picture>
+              
+              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-            <form action="">
-              <input type="hidden" name="product" value="">
-              <button type="submit" class="button button--primary">Add to Cart</button>
-            </form>
+              <div class="rating rating__summary">
+                <div class=""></div>
+                <p class="">(#)</p>
+              </div>
 
-            <ul class="product__icons">
-              <li>
-                  <a href="" title="Add to wishlist" class="product__icons__item"><span class="icon-heart"></span></a>
-              </li>
-              <li>
-                  <a href="" title="Add to Compare" class="product__icons__item"><span class="icon-bar-chart"></span></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              <p class="price">As low as <strong>$21.99</strong></p>
 
-        <div class="toolbar">
-          <ul class="pagination pagination__list">
-            <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
-            <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
-            <li class="pagination__item"><a class="pagination__link" href=""><span class="icon-arrow-right"></span></a></li>
+              <form action="">
+                <input type="hidden" name="product" value="">
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              </form>
+
+              <ul class="product__item-icons-wrap">
+                <li>
+                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                </li>
+                <li>
+                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="product__grid__item">
+              <picture>
+                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+              </picture>
+              
+              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+
+              <div class="rating rating__summary">
+                <div class=""></div>
+                <p class="">(#)</p>
+              </div>
+
+              <p class="price">As low as <strong>$21.99</strong></p>
+
+              <form action="">
+                <input type="hidden" name="product" value="">
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              </form>
+
+              <ul class="product__item-icons-wrap">
+                <li>
+                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                </li>
+                <li>
+                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="product__grid__item">
+              <picture>
+                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+              </picture>
+              
+              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+
+              <div class="rating rating__summary">
+                <div class=""></div>
+                <p class="">(#)</p>
+              </div>
+
+              <p class="price">As low as <strong>$21.99</strong></p>
+
+              <form action="">
+                <input type="hidden" name="product" value="">
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              </form>
+
+              <ul class="product__item-icons-wrap">
+                <li>
+                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                </li>
+                <li>
+                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="product__grid__item">
+              <picture>
+                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+              </picture>
+              
+              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+
+              <div class="rating rating__summary">
+                <div class=""></div>
+                <p class="">(#)</p>
+              </div>
+
+              <p class="price">As low as <strong>$21.99</strong></p>
+
+              <form action="">
+                <input type="hidden" name="product" value="">
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              </form>
+
+              <ul class="product__item-icons-wrap">
+                <li>
+                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                </li>
+                <li>
+                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="product__grid__item">
+              <picture>
+                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+              </picture>
+              
+              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+
+              <div class="rating rating__summary">
+                <div class=""></div>
+                <p class="">(#)</p>
+              </div>
+
+              <p class="price">As low as <strong>$21.99</strong></p>
+
+              <form action="">
+                <input type="hidden" name="product" value="">
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              </form>
+
+              <ul class="product__item-icons-wrap">
+                <li>
+                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                </li>
+                <li>
+                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="product__grid__item">
+              <picture>
+                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+              </picture>
+              
+              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+
+              <div class="rating rating__summary">
+                <div class=""></div>
+                <p class="">(#)</p>
+              </div>
+
+              <p class="price">As low as <strong>$21.99</strong></p>
+
+              <form action="">
+                <input type="hidden" name="product" value="">
+                <button type="submit" class="button button--primary">Add to Cart</button>
+              </form>
+
+              <ul class="product__item-icons-wrap">
+                <li>
+                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                </li>
+                <li>
+                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                </li>
+              </ul>
+            </li>
           </ul>
 
-          <div class="limiter">
-            <label for="limiter" id="limiter">Show</label>
-            <select class="select" name="limiter" id="limiter">
-              <option value="4" selected>4</option>
-              <option value="8">8</option>
-              <option value="12">12</option>
-            </select>
+          <div class="toolbar">
+            <ul class="pagination">
+              <li class="pagination__item"><span class="pagination__link pagination__link--current">1</span></li>
+              <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href=""><span class="icon-arrow-right"></span></a></li>
+            </ul>
+
+            <div class="limiter">
+              <label for="limiter" id="limiter">Show</label>
+              <select class="select" name="limiter" id="limiter">
+                <option value="4" selected>4</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+              </select>
+            </div>
           </div>
+        </section>
+      </main>
+
+      <aside class="visualy-hidden absolute-wrapper product-options-wrapper aside-container-grid">
+        <div>
+          <h2 h2tabindex="0" class="menu-title lg-product-options__title">Shopping Options</h2>
+
+          <button class="close-button visualy-hidden--desktop">Close <span class="icon-x-circle"></span></button>
+
+          <dl class="menu__list">
+            <dt class="menu__list-item">Color</dt>
+            <dd>
+              <ul class="menu__list--second">
+                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Black</a></li>
+                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Orange</a></li>
+                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Blue</a></li>
+                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">White</a></li>
+              </ul>
+            </dd>
+            <dt class="menu__list-item">Size</dt>
+            <dd>
+              <ul class="menu__list--second">
+                <li class="menu__list-item--second">
+                    <input type="checkbox" id="size_s" name="size_s" class="checkbox">
+                    <label for="size_s">S</label>
+                </li>
+                <li class="menu__list-item--second">
+                    <input type="checkbox" id="size_m" name="size_m" class="checkbox">
+                    <label for="size_m">M</label>
+                </li>
+                <li class="menu__list-item--second">
+                    <input type="checkbox" id="size_l" name="size_l" class="checkbox">
+                    <label for="size_l">L</label>
+                </li>
+              </ul>
+            </dd>
+            <dt class="menu__list-item">Material</dt>
+            <dd>
+              <ul class="menu__list--second">
+                <li class="menu__list-item--second">
+                    <input type="checkbox" id="material_pvc" name="material_pvc" class="checkbox">
+                    <label for="material_pvc">Strong PVC</label>
+                </li>
+                <li class="menu__list-item--second">
+                    <input type="checkbox" id="material_composit" name="material_composit" class="checkbox">
+                    <label for="material_composit">Carbon</label>
+                </li>
+              </ul>
+            </dd>
+            <dt class="menu__list-item">Price</dt>
+            <dd class="menu__list-item--second">
+              <input type="range" id="price_range" name="price_range" class="range">
+              <label for="price_range">Select price range</label>
+            </dd>
+          </dl>
         </div>
-      </section>
-    </main>
-    <aside class="container aside visualy-hidden">
-      <div>
-        <button class="close-button">Close <span class="icon-x-circle close-button__append"></span></button>
-
-        <h2 tabindex="0" class="menu-title">Shopping Options</h2>
-        
-        
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            Color
-            <ul class="menu__list--second">
-              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Black</a></li>
-              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Orange</a></li>
-              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Blue</a></li>
-              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">White</a></li>
-            </ul>
-          </li>
-          <li class="menu__list-item">
-            Size
-            <ul class="menu__list--second">
-              <li class="menu__list-item--second">
-                  <input type="checkbox" id="size_s" name="size_s" class="checkbox">
-                  <label for="size_s">S</label>
-              </li>
-              <li class="menu__list-item--second">
-                  <input type="checkbox" id="size_m" name="size_m" class="checkbox">
-                  <label for="size_m">M</label>
-              </li>
-              <li class="menu__list-item--second">
-                  <input type="checkbox" id="size_l" name="size_l" class="checkbox">
-                  <label for="size_l">L</label>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__list-item">
-            Material
-            <ul class="menu__list--second">
-              <li class="menu__list-item--second">
-                  <input type="checkbox" id="material_pvc" name="material_pvc" class="checkbox">
-                  <label for="material_pvc">Strong PVC</label>
-              </li>
-              <li class="menu__list-item--second">
-                  <input type="checkbox" id="material_composit" name="material_composit" class="checkbox">
-                  <label for="material_composit">Carbon</label>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__list-item">
-            Price
-            <ul>
-              <li class="menu__list-item--second">
-                  <input type="range" id="price_range" name="price_range" class="range">
-                  <label for="price_range">Select price range</label>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
+      </aside>
+    </div>
     <footer class="footer">
       <section class="newsletter__content">
         <div class="container">

@@ -242,29 +242,30 @@
         <span class="icon-chevron-right breadcrumb__vector"></span>
         <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0"><strong>Ultimate Frisbee</strong></li>
       </ul>
-      <div">
-        <div class="product-page-slider">
+
+      <div class="product-page__wrapper">
+        <div class="product-page__slider">
           <picture>
             <source srcset="" />
             <source srcset="" />
             <img src="/assets/img/product-page/slider/image 4.jpg" alt="picture_1" />
           </picture>
-          <ul  class="product-page-slider-list">
-            <li class="product-page-slider-list__item">
+          <ul  class="product-page-slider__list">
+            <li class="product-page-slider__list--item">
               <picture>
                 <source srcset="" />
                 <source srcset="" />
                 <img src="/assets/img/product-page/slider/Rectangle 78.jpg" alt="picture_1" />
               </picture>
             </li>
-            <li class="product-page-slider-list__item">
+            <li class="product-page-slider__list--item">
               <picture>
                 <source srcset="" />
                 <source srcset="" />
                 <img src="/assets/img/product-page/slider/Rectangle 79.jpg" alt="picture_2" />
               </picture>
             </li>
-            <li class="product-page-slider-list__item">
+            <li class="product-page-slider__list--item">
               <picture>
                 <source srcset="" />
                 <source srcset="" />
@@ -274,7 +275,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class="product-page__info-wrapper">
           <h1 tabindex="0" class="product__title">Inova Pulsar | Major League Ultimate Championship 175 Gram Flying Disc Ultrasta</h1>
           <div class="product__stock">
             <p class="product__stock-p">In Stock</p>
@@ -287,10 +288,10 @@
             <span><strong>$21.99</strong></span>
           </div>
           
-          <form action="">
+          <form action="" class="product__form">
             <dl class="product__color">
               <dt tabindex="0" class="product__color__title">Color</dt>
-              <div class="product__color-list">
+              <div class="product__list">
                 <dd tabindex="0">
                   <label for="black"></label>
                   <input type="color" class="input-color" id="" name="black" value="#000000" disabled/>
@@ -303,16 +304,25 @@
                   <label for="purple"></label>
                   <input type="color" class="input-color" id="" name="purple" value="#ef3dff" disabled/>
                 </dd>
-              </div>  
+              </div> 
             </dl>
 
-            <fieldset class="product__qty">
-              <legend>Qty: </legend>
-              <label for="qty"></label>
-              <input name="qty" type="number" class="product__qty__input"/>
-            </fieldset>
+            <div class="lg-flex-wrapper">
+              <dl class="product__list">
+                <dt tabindex="0" class="product__qty">Qty:</dt>
+                <dd>
+                  <form>
+                    <fieldset>
+                      <legend class="visualy-hidden">Item qty control</legend>
+                      <label for="qty"></label>
+                      <input name="qty" type="number" class="number"/>
+                    </fieldset>
+                  </form>
+                </dd> 
+              </dl>
 
-            <button class="button button--primary button--large">Add to cart</button>
+              <button class="button button--primary button--large product-button" type="submit">Add to cart</button>
+            </div>
 
             <ul class="product__wishlist">
               <li>
@@ -327,25 +337,45 @@
           </form>
         </div>
       </div>
-      <section>
-        <details class="product__details">
-            <summary>
-                <h2 aria-labeledby="" aria-controls="details" aria-selected="" aria-expanded="true" tabindex="0" class="product__details__title">Details <span class="icon-chevron-down product__details__icon"></span></h2>
+      
+      <section class="product-page__details-wrapper">
+        <details class="product__details" open>
+            <summary class="product__details-summary">
+                <h2 aria-labeledby="" aria-controls="details" aria-selected="" aria-expanded="true" tabindex="0" class="product__details__title">Details <span class="icon-chevron-down product__details__icon visualy-hidden--mid"></span></h2>
             </summary>
-            <div aria-labelledby="" tabindex="0">
+            <div aria-labelledby="" tabindex="0" class="product__details-item">
                 <p>Note: Stamp colour on disc may vary from pictured image.</p>
                 <p>This is not a Frisbee its a quality Flying Disc, if you dont know the difference think of the Frisbee as a toy and a Flying Disc as a quality piece of sports equipment.</p>
                 <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
             </div>
         </details>
         
-        <details>
-            <summary>
-                <h2 aria-labeledby="" aria-controls="description" aria-selected="" aria-expanded="true" tabindex="0" class="product__details__title">More information <span class="icon-chevron-down product__details__icon"></span></h2>
+        <details class="product__details">
+            <summary class="product__details-summary">
+                <h2 aria-labeledby="" aria-controls="description" aria-selected="" aria-expanded="true" tabindex="0" class="product__details__title">More information <span class="icon-chevron-down product__details__icon visualy-hidden--mid"></span></h2>
             </summary>
 
-            <div aria-labelledby="" tabindex="0">
-                <p>USA Ultimate approved for tournament play, the Pulsar is the official disc of Major League Ultimate. This disc is not just a competition disc. It is also perfect for freestyling at the beach or for a game of throw and catch in the backyard or park. The Pulsar is also approved for Super Class and PDGA disc golf use.</p>
+            <div aria-labelledby="" tabindex="0" class="product__details-item">
+              <table>
+                <tbody class="product-details__table">
+                  <tr class="product-details__table__list">
+                    <th class="product-details__table__list-th">Style:</th>
+                    <td class="product-details__table__list-td">Insulated, Heavy Duty, Soft Shell, 1/4 zip</td>
+                  </tr>
+                  <tr class="product-details__table__list">
+                    <th class="product-details__table__list-th">Material:</th>
+                    <td class="product-details__table__list-td">Fleece, Polyester, wool</td>
+                  </tr>
+                  <tr class="product-details__table__list">
+                    <th class="product-details__table__list-th">Pattern:</th>
+                    <td class="product-details__table__list-td">Solid</td>
+                  </tr>
+                  <tr class="product-details__table__list">
+                    <th class="product-details__table__list-th">Climate:</th>
+                    <td class="product-details__table__list-td">All-Weather, Cool, Indoor, Spring</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </details>
       </section>

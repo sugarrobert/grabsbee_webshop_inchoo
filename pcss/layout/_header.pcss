@@ -6,8 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: pxtorem(21);
-  padding-bottom: pxtorem(21);
+  padding-top: 1.313rem;
+  padding-bottom: 1.313rem;
+}
+
+.logo {
+  margin-bottom: 0;
 }
 
 .header__drawers-list__item {
@@ -16,39 +20,60 @@
 
 .header__buttons {
   color: white;
-  padding-left: pxtorem(10);
-  padding-right: pxtorem(10);
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
-.logo {
-  margin-bottom: 0;
-}
-
-.search-buton {
-  top: pxtorem(30px);
-  right: 50%;
-  color: var(--color-white);
-}
-
-.search {
+.search-wrapper {
   color: var(--color-white);
   background: var(--primary__color);
-  width: 100%;
-  height: 147px;
+  height: 9.188rem;
+  @mixin ui-default-transition all;
+
+  @media (--mid) { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (--large) { 
+    padding: 0 2.5rem;
+    right: 0;
+    left: 0;
+  }
+}
+
+.search-close-btn {
+  top: 1.875rem;
+  right: 50%;
+  color: var(--color-white);
+
+  @media (--mid) {
+    position: static;
+    width: 5.625rem;
+  }
 }
 
 .search-form {
+  width: inherit;
+}
+
+.search-fieldset {
   display: flex;
   flex-direction: row-reverse;
-  padding-top: pxtorem(65px);
-  border-bottom: pxtorem(1px) solid var(--secondary__color);
+  padding-top: 4.063rem;
+  border-bottom: 1px solid var(--secondary__color);
+
+  @media (--mid) {
+    padding: 0;
+  }
 }
 
 .search-input {
   border: none;
   color: var(--color-white);
   background: var(--primary__color);
-  padding: 0 5px;
+  padding: 0 0.313rem;
   width: 100%;
   
   &::placeholder {
@@ -56,12 +81,17 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin: 0px 6px;
+    margin: 0px 0.375rem;
   }
 }
 
-.cart-title {
-  color: var(--text__color);
+.cart-wrapper {
+  max-width: 43.438rem;
+  min-height: 56.5rem;
+
+  @media(--large) {
+    min-height: 67.5rem;
+  }
 }
 
 .cart-list__item {
@@ -70,22 +100,23 @@
   padding-bottom: 50px;
 }
 
-.cart-list__item--img {
-  padding-right: pxtorem(20px); 
+.cart-title {
+  color: var(--text__color);
 }
 
-.cart-list__item--wraper {
-  
+.cart-recently-added {
+  @mixin body-font-size 0.875rem, 1.5rem, bold;
+  color: var(--text__color);
+}
+
+.cart-list__item--img {
+  padding-right: 1.25rem; 
 }
 
 .cart-list__item--title {
-  font-family: var(--body__type);
-  font-style: normal;
-  font-weight: bold;
-  font-size: pxtorem(14px);
-  line-height: pxtorem(24px);
+  @mixin body-font-size 0.875rem, 1.5rem, bold;
   text-transform: uppercase;
-  margin-bottom: pxtorem(10px);
+  margin-bottom: 0.625rem;
 }
 
 .cart-list__item--title__link {
@@ -100,15 +131,13 @@
 }
 
 .cart-list__second-item {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 24px;
-  padding: 5px;
+  @mixin body-font-size 0.75rem, 1.5rem, bold;
+  padding: 0.313rem;
 }
 
 .cart-list__second-item-description {
-  font-size: 12px;
-  line-height: 21px;
+  font-size: 0.75rem;
+  line-height: 1.313rem;
 }
 
 .cart-action {
@@ -116,46 +145,27 @@
 }
 
 .cart-action-icon {
-  padding: 5px;
-  font-size: 16px;
+  padding: 0.313rem;
+  font-size: 0.813rem;
 }
 
-.cart-table {
-  margin: 20px 0px 10px;
-}
+.cart-checkout {
+  @mixin flex column, center, center, wrap;
 
-.cart-table__list {
-  border-top: 1px solid var(--primary__color);
-  border-bottom: 1px solid var(--primary__color);
-}
-
-.cart-table__list-th{
-  padding: pxtorem(10px) 0;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.cart-table__list-td{
-  padding: pxtorem(10px) 0;
-  text-align: right;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.flex-center {
-  @mixin flex column, center, center, nowrap;
+  @media(--mid) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .edit-cart-link {
   text-decoration: none;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  @mixin body-font-size 0.875rem, 1.5rem, normal;
   text-transform: uppercase;
-  color: #EC1D2E;
-  padding: 20px;
+  color: var(--secondary__color);
+  padding: 1.25rem;
+
+  @media(--mid) {
+    @mixin body-font-size 1rem, 1.5rem, normal;
+  }
 }

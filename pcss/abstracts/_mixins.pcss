@@ -95,11 +95,6 @@
   margin: 0;
 }
 
-@define-mixin section-title {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 @define-mixin icon-font-display $content {
   font-family: "Inchoo-Icons";
   content: $content;
@@ -151,4 +146,25 @@
 @define-mixin aspect-ratio-calc-old $height, $width {
   height: 0;
   padding-bottom: calc(($height / $width) * 100%);
+}
+
+@define-mixin section-title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@define-mixin headings-font-size $fontsize, $lineheight, $fontweight {
+  font-family: var(--headings__type);
+  font-style: normal;
+  font-weight: $fontweight;
+  font-size: $fontsize;
+  line-height: $lineheight;
+}
+
+@define-mixin body-font-size $fontsize, $lineheight, $fontweight {
+  font-family: var(--body__type);
+  font-style: normal;
+  font-weight: $fontweight;
+  font-size: $fontsize;
+  line-height: $lineheight;
 }

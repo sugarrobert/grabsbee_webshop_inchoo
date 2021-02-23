@@ -8,10 +8,10 @@ button {
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
-  height: 42px;
-  font-size: 14px;
+  height: 2.625rem;
+  font-size: 0.875rem;
   font-weight: 700;
   text-align: center;
   justify-content: center;
@@ -23,8 +23,8 @@ button {
   @mixin ui-default-transition all;
 
   @media (--large) {
-    font-size: 16px;
-    height: 48px;
+    font-size: 1rem;
+    height: 3rem;
     padding-left: pxtorem(32, 14);
     padding-right: pxtorem(32, 14);
   }
@@ -55,12 +55,7 @@ button {
 }
 
 .button--large {
-  width: 100%;
-  margin-top: 20px;
-
-  @media (--large) {
-    width: 336px;
-  }
+  width: 21rem;
 }
 
 .button--primary--disabled {
@@ -76,17 +71,14 @@ button {
 }
 
 .close-button {
-  position: absolute;
-  top: pxtorem(15px);
-  right: pxtorem(25px);
-  font-size: pxtorem(14px);
-  line-height: pxtorem(21px);
+  @mixin absolute 0.938rem, 1rem, auto, auto;
+  font-size: 0.875rem;
+  line-height: 1.313;
   color: var(--text__color);
-  
 }
 
 .close-button__append {
   position: absolute;
-  top: pxtorem(2px);
-  padding-left: pxtorem(5px);
+  top: 0.125rem;
+  padding-left: 0.313rem;
 }

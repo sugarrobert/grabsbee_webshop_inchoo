@@ -7,3 +7,51 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.cart-table {
+  margin: 20px 0px 10px;
+}
+
+.cart-table__list {
+  border-top: 1px solid var(--primary__color);
+  border-bottom: 1px solid var(--primary__color);
+}
+
+.cart-table__list-th {
+  padding: pxtorem(10px) 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.cart-table__list-td {
+  padding: pxtorem(10px) 0;
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.product-details__table {
+  vertical-align: top;
+}
+
+.product-details__table__list {
+  &:nth-of-type(even) {
+    background-color: var(--primary-5);
+  }
+}
+
+.product-details__table__list-th {
+  @mixin body-font-size 0.875rem, 1.313rem, bold;
+  text-transform: uppercase;
+  color: var(--text__color);
+  text-align: left;
+  vertical-align: text-top;
+  padding: 0 0.5rem 1.5rem;
+}
+
+.product-details__table__list-td {
+  @mixin body-font-size 0.875rem, 1.313rem, normal;
+  color: var(--text__color);
+}

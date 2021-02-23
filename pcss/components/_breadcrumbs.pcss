@@ -1,4 +1,5 @@
 .breadcrumb {
+  @mixin flex row, center;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6,11 +7,8 @@
 }
 
 .breadcrumb__item {
+  @mixin body-font-size 0.75rem, 1.313rem, normal;
   font-family: var(--body__type);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.75rem;
-  line-height: 1.313rem;
   padding: 0 0.313rem;
 }
 

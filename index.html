@@ -17,13 +17,13 @@
         <ul class="header__drawers-list">
           <li class="header__drawers-list__item">
             <button class="button--no-styles header__buttons">
-              <span class="icon-search"></span>
+              <span class="icon-search" id="nav-search-btn"></span>
               <span class="visualy-hidden">Search From Trigger</span>
             </button>
 
-            <div class="search container visualy-hidden">
-              <form>
-                <fieldset class="search-form">
+            <div class="visualy-hidden search-wrapper container absolute-wrapper" id="search-wraper">
+              <form class="search-form">
+                <fieldset class="search-fieldset">
                   <legend tabindex="0" class="visualy-hidden">Grabsee search form</legend>
                   <label tabindex="0" for="search" class="visualy-hidden"
                     >Enter here your search term</label
@@ -38,21 +38,24 @@
                 </fieldset>
               </form>
 
-              <button class="menu-button search-buton">Close <span class="icon-x-circle menu-button__append"></span></button>
+              <button class="close-button search-close-btn">Close <span class="icon-x-circle menu-button__append"></span></button>
             </div>
           </li>
+          
           <li class="header__drawers-list__item">
             <button class="button--no-styles header__buttons">
               <span class="icon-shopping-cart"></span>
               <span class="visualy-hidden">Cart</span>
             </button>
 
-            <section class="container cart visualy-hidden">
+            <section class="visualy-hidden container absolute-wrapper cart-wrapper">
               <h2 class="menu-title cart-title"># item in Cart</h2>
-
+              
               <button class="close-button">Close <span class="icon-x-circle close-button__append"></span></button>
         
               <ol class="list-template-layout">
+                <p class="cart-recently-added">Recently added items</p>
+
                 <li class="cart-list__item">
                   <div class="cart-list__item--img">
                     <img src="/assets/img/home-page/cart/black.jpg" alt="Item name 1" />
@@ -60,8 +63,7 @@
 
                   <div class="cart-list__item--wraper">
                     <h2 class="cart-list__item--title">
-                      <a href="" class="cart-list__item--title__link">Innova Pulsar | 
-                        Major League Ultimate ...</a>
+                      <a href="" class="cart-list__item--title__link">Innova Pulsar | Major League Ultimate ...</a>
                     </h2>
 
                     <dl class="cart-list__second">
@@ -75,7 +77,7 @@
                           <fieldset>
                             <legend class="visualy-hidden">Item qty control</legend>
                             <label for="qty"></label>
-                            <input name="qty" type="number" />
+                            <input name="qty" type="number" class="number"/>
                           </fieldset>
                         </form>
                       </dd>
@@ -100,12 +102,12 @@
                 </tbody>
               </table>
 
-              <div class="flex-center">
+              <div class="cart-checkout">
                 <button class="button button--primary button--large">Proceed to checkout</button>
                 <a href="" title="Back to Cart page" class="edit-cart-link">View and edit cart</a>
               </div>
 
-              <div>
+              <div class="visualy-hidden">
                 <strong class="menu-title cart-title">You have no items in your shopping cart</strong>
               </div>
             </section>
@@ -113,93 +115,99 @@
           
           <li class="header__drawers-list__item">
             <button class="button--no-styles header__buttons">
-              <span class="icon-menu"></span>
+              <span class="icon-menu visualy-hidden--desktop"></span>
               <span class="visualy-hidden">Navigation Trigger</span>
             </button>
 
-            <nav class="container nav visualy-hidden">
-              <h2 tabindex="0" class="menu-title">Menu</h2>
-              <ul class="menu__list">
-                <li>
-                  <h2 class="menu__list-item">Frisbees</h2>
+            <div class="menu-wrapper absolute-wrapper lg-menu-wrapper">
+              <nav class="container">
+                <h2 tabindex="0" class="menu-title visualy-hidden--desktop">Menu</h2>
+                <ul class="menu__list lg-menu__list">
+                  <li>
+                    <h2 class="menu__list-item lg-menu__list-item">Frisbees</h2>
 
-                  <div>
-                    <h3 tabindex="0" class="menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon"></span> Ultimate Frisbees</h3>
+                    <div class="lg-menu__list-item--second-container">
+                      <div class="lg-menu__list-item-second-wrapper">
+                        <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Ultimate Frisbees</h3>
 
-                    <ul class="menu__list--third">
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Innova Pulsar</a></li>
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Xcom</a></li>
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
-                    </ul>
-                  </div>
+                        <ul class="menu__list--third lg-menu-list--third">
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Innova Pulsar</a></li>
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Xcom</a></li>
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
+                        </ul>
+                      </div>
 
-                  <div>
-                    <h3 tabindex="0"class="menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon"></span>Recreational</h3>
+                      <div class="lg-menu__list-item-second-wrapper">
+                        <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Recreational</h3>
 
-                    <ul class="menu__list--third">
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Nite</a></li>
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Yikin</a></li>
-                    </ul>
-                  </div>
+                        <ul class="menu__list--third lg-menu-list--third">
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Nite</a></li>
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Yikin</a></li>
+                        </ul>
+                      </div>
 
-                  <div class="visualy-hidden">
-                    <h3 tabindex="0" class="menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon"></span> Contact us</h3>
+                      <div class="lg-menu__list-item-second-wrapper">
+                        <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
 
-                    <ul class="menu__list--third">
-                      <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
-                      <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
-                      <li class="menu__list-item--third">
-                      <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <h2 class="menu__list-item">Clothing</h2>
+                        <ul class="menu__list--third lg-menu-list--third">
+                          <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
+                          <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
+                          <li class="menu__list-item--third">
+                          <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>  
+                  </li>
+                  <li>
+                    <h2 class="menu__list-item lg-menu__list-item">Clothing</h2>
 
-                  <div>
-                    <h3 tabindex="0" class="menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon"></span>Ultimate Frisbees</h3>
+                    <div class="visualy-hidden lg-menu__list-item--second-container">
+                      <div class="lg-menu__list-item-second-wrapper">
+                        <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Ultimate Frisbees</h3>
 
-                    <ul class="menu__list--third">
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Innova Pulsar</a></li>
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Xcom</a></li>
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
-                    </ul>
-                  </div>
+                        <ul class="menu__list--third lg-menu-list--third">
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Innova Pulsar</a></li>
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Xcom</a></li>
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
+                        </ul>
+                      </div>
 
-                  <div>
-                    <h3 class="menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon"></span>Recreational</h3>
+                      <div class="lg-menu__list-item-second-wrapper">
+                        <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Recreational</h3>
 
-                    <ul class="menu__list--third">
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Nite</a></li>
-                      <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Yikin</a></li>
-                    </ul>
-                  </div>
+                        <ul class="menu__list--third lg-menu-list--third">
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Nite</a></li>
+                          <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Yikin</a></li>
+                        </ul>
+                      </div>
 
-                  <div class="visualy-hidden">
-                    <h3 tabindex="0" class="menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon"></span> Contact us</h3>
+                      <div class="lg-menu__list-item-second-wrapper">
+                        <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
 
-                    <ul class="menu__list--third">
-                      <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
-                      <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
-                      <li class="menu__list-item--third">
-                      <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <h2 class="menu__list-item">Accessories</h2>
-                </li>
-                <li>
-                  <h2 class="menu__list-item">Contact us</h2>
-                </li>
-              </ul>
+                        <ul class="menu__list--third lg-menu-list--third">
+                          <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
+                          <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
+                          <li class="menu__list-item--third">
+                          <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h2 class="menu__list-item lg-menu__list-item">Accessories</h2>
+                  </li>
+                  <li>
+                    <h2 class="menu__list-item lg-menu__list-item">Contact us</h2>
+                  </li>
+                </ul>
 
-              <button class="menu-button">Close <span class="icon-x-circle menu-button__append"></span></button>
-            </nav>
+                <button class="close-button visualy-hidden--desktop">Close <span class="icon-x-circle"></span></button>
+              </nav>
+            </div>
           </li>
         </ul>
       </div>  
@@ -213,9 +221,9 @@
               <span class="icon-arrow-left"></span>
             </div>
             <div class="hero-slider-list__inner">
-              <h2 class="hero-slider-list__title">The flying disk store</h2>
+              <h2 class="hero-slider-list__title header-title">The flying disk store</h2>
               <a href="./layout-category-listing.html"
-                class="button button--primary flex"
+                class="button button--primary"
                 >Buy the disk</a>
             </div>
             <div class="hero-slider-list__arrow right">
@@ -257,12 +265,11 @@
             </ul>
           </div>
         </ul>
-        
       </section>
 
       <section class="container featured-categorie">
         
-        <h2 tabindex="0">Featured Categories</h2>
+        <h2 tabindex="0" class="featured-categorie__title ">Featured Categories</h2>
 
         <ul class="featured-categorie__list">
           <li class="featured-categorie__tile">
@@ -278,7 +285,7 @@
             <a href="#" class="featured-categorie__tile__title">Gear</a>
           </li>
           <li class="featured-categorie__tile">
-            <picture>
+            <picture class="featured-categorie__tile__picture">
               <img src="/assets/img/home-page/categories/Rectangle 3.jpg" alt="Categorie Accessories" class="featured-categorie__tile__img"/>
             </picture>
             <a href="#" class="featured-categorie__tile__title">Accessories</a>
@@ -315,7 +322,7 @@
                 type="email"
                 class="input footer__input"
               />
-              <button class="button button--primary button--large" type="submit">
+              <button class="button button--primary footer-button" type="submit">
                 Subscibe
               </button>
             </fieldset>
@@ -324,8 +331,8 @@
       </section>
 
       <section class="summary__content">
-        <div class="container">
-          <details class="footer__details">
+        <div class="footer-container">
+          <details class="footer__details" id="footer__details" open>
             <summary class="footer__summary">
               <h2 class="footer__title footer__summary-title">Categories</h2>
             </summary>
@@ -346,23 +353,16 @@
             </ul>
           </details>
 
-          <details class="footer__details">
+          <details class="footer__details" id="footer__details" open>
             <summary class="footer__summary">
               <h2 class="footer__title footer__summary-title">Contact us</h2>
             </summary>
 
-            <ul>
-              <li tabindex="0"><address class="summary__links">Trg Slobode 6</address></li>
-              <li>
-                <a class="summary__links" href="tel:+385958811630"
-                  >+385 95 8811630</a
-                >
-              </li>
-              <li>
-                <a
-                  class="summary__links"
-                  href="mailto:filip.svetlicic@gmail.com"
-                  >filip.svetlicic@gmail.com</a
+            <ul class="footer__summary-list">
+              <li tabindex="0" class=""><span class="icon-map-pin summary__links"></span> Trg Slobode 6</li>
+              <li class=""><a href="tel:+385958811630" class="summary__links"><span class="icon-phone "></span> +385 95 8811630</a></li>
+              <li class="">
+              <a href="mailto:filip.svetlicic@gmail.com" class="summary__links"><span class="icon-mail"></span> filip.svetlicic@gmail.com</a
                 >
               </li>
             </ul>
@@ -376,5 +376,7 @@
         >
       </div>
     </footer>
+
+    <script src="/script/main.js"></script>
   </body>
 </html>

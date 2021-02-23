@@ -8,11 +8,17 @@
 }
 
 .visualy-hidden {
-  @mixin no-display
+  @mixin no-display;
+}
+
+.visualy-hidden--mid {
+  @media (--mid) {
+    @mixin no-display;
+  }
 }
 
 .visualy-hidden--desktop {
   @media (--large) {
-    @mixin no-display
+    @mixin no-display;
   }
 }

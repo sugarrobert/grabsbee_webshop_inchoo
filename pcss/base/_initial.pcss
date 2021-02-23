@@ -1,7 +1,24 @@
 .container {
   @mixin container $container-width, $container-gutter;
+
+  @media(--large) {
+    @mixin container $container-width, 3.5rem;
+  }
 }
 
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+.absolute-wrapper {
+  @mixin absolute 0, 0, auto, auto;
+  width: 100%;
+  background: var(--color-white);
+  z-index: 2;
+}
+
+.lg-flex-wrapper {
+  @media(--mid) {
+    @mixin flex row;
+  }
 }

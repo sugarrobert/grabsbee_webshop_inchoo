@@ -41,7 +41,7 @@ select {
   background-size: pxtorem(10px);
   background-repeat: no-repeat;
   background-color: transparent;
-  padding-right: pxtorem(30px);
+  padding-right: pxtorem(24px);
 
   &::-ms-expand {
     display: none;
@@ -60,22 +60,7 @@ summary:focus {
 
 input[type="number"] {
   -moz-appearance: textfield;
-  display: inline-block;
-  width: 63px;
-  height: 42px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  border: 1px solid var(--input-border-color-default);
-  color: var(--neutral-color);
-
-  @media (--large) {
-    font-size: 16px;
-    height: 48px;
-  }
-
+  
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -83,67 +68,70 @@ input[type="number"] {
   }
 }
 
-.input {
+.number {
   display: inline-block;
-  width: 320px;
-  height: 42px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  width: 3.938rem;
+  height: 2.625rem;
+  border: 1px solid var(--input-border-color-default);
+  color: var(--neutral-color);
 
   @media (--large) {
-    font-size: 16px;
-    height: 48px;
+    font-size: 1rem;
+    height: 3rem;
+  }
+}
+
+.input {
+  display: inline-block;
+  width: 20rem;
+  height: 2.625rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+
+  @media (--large) {
+    font-size: 1rem;
+    height: 3rem;
   }
 }
 
 .select {
   display: inline-block;
   width: auto;
-  height: 42px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  height: 2.625rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   border: 1px solid var(--input-border-color-default);
   color: var(--neutral-color);
+  padding-right: 2rem;
 
   @media (--large) {
-    font-size: 16px;
-    height: 48px;
+    font-size: 1rem;
+    height: 3rem;
   }
 }
 
 .checkbox {
   position: relative;
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
   padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 
   &:checked {
     &:after {
       @mixin icon-font-display "\e908";
       position: absolute;
-      width: 10px;
-      height: 10px;
+      width: 0.625rem;
+      height: 0.625rem;
       color: var(--color-white);
       background: var(--secondary__color);
-      font-size: 10px;
+      font-size: 0.625rem;
       line-height: 1.2;
     }
-  }
-
-  @media (--large) {
-    font-size: 16px;
-    height: 48px;
   }
 }
 
@@ -151,11 +139,16 @@ input[type="number"] {
   border: none;
   outline: none;
   padding: 0;
-  width: 28px;
-  height: 18px;
+  width: 1.75rem;
+  height: 100%;
+
+  @media(--large) {
+    width: 1.875rem;
+    height: 1.5rem;
+  }
 }
 
 .range {
   -webkit-appearance: auto;
-  width: pxtorem(100px);
+  width: 6.25rem;
 }
