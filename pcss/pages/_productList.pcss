@@ -52,6 +52,18 @@
   padding: 1.25rem 0;
 }
 
+.toolbar__button {
+  width: 2.625rem;
+  height: 2.625rem;
+  padding: 0;
+
+  @media(--large) {
+    width: 2.846rem;
+    height: 3rem;
+    padding: 0;
+  }
+}
+
 .toolbar__icons {
   display: flex;
   flex-direction: row;
@@ -61,29 +73,7 @@
   list-style: none;
 }
 
-.product__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.25rem 0.625rem;
-
-  @media (min-width: 620px) {
-    grid-template-columns: repeat(4, 1fr)
-  }
-
-  @media (--mid) {
-    grid-template-columns: repeat(4, 1fr)
-  }
-
-  @media (--large) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: 1400px) {
-    grid-template-columns: repeat(4, 1fr)
-  }
-}
-
-.product__grid__item {
+.product__item {
   width: 160px;
   height: 357px;
   @mixin flex column, center, center, nowrap;

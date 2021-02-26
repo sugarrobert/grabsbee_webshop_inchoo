@@ -24,7 +24,7 @@
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 4;
 }
 
 .aside-container-grid {
@@ -53,4 +53,26 @@
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 3;
+}
+
+.product__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.25rem 0.625rem;
+
+  @media (min-width: 620px) {
+    grid-template-columns: repeat(4, 1fr)
+  }
+
+  @media (--mid) {
+    grid-template-columns: repeat(4, 1fr)
+  }
+
+  @media (--large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr)
+  }
 }

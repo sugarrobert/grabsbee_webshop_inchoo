@@ -1,6 +1,11 @@
 .menu-wrapper {
+  @mixin absolute 0, 0, auto, auto;
   max-width: 22.5rem;
   min-height: 40rem;
+  background: var(--color-white);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
 }
 
 .menu-title {
@@ -21,9 +26,9 @@
   letter-spacing: 0.05em;
   color: var(--text__color);
   position: relative;
-  border-bottom: 1px solid var(--primary-10);
-  padding-bottom: 1px;
+  padding: 0.6rem 0;
   margin: 0;
+  box-shadow: 0px 1px 0px var(--primary-10);
   cursor: pointer;
 
   &:before {
@@ -37,6 +42,10 @@
   padding: 0 0.313rem;
 }
 
+.menu__list-item--second-container {
+  display: none;
+}
+
 .menu__list-item--second {
   padding: 0.625rem;
   display: flex;
@@ -45,6 +54,11 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 0;
+  cursor: pointer;
+  
+  @media(--large){
+    cursor: default;
+  }
 }
 
 .menu__list-item--second-link {
@@ -56,6 +70,7 @@
 .menu__list--third {
   padding-left: 1.875rem;
   padding-bottom: 0.625rem;
+  display: none;
 }
 
 .menu__list-item--third-link {
@@ -67,10 +82,13 @@
 
 @media(--large) {
   .lg-menu-wrapper{
-    max-width: 100%;
+    width: 100%;
     min-height: 2rem;
+    left: 0;
     top: 63px;
     background: var(--secondary__color);
+    visibility: visible;
+    opacity: 1;
   }
 
   .lg-menu__list {
@@ -82,6 +100,7 @@
     color: var(--color-white);
     padding: 0.75rem 1rem;
     border: none;
+    box-shadow: none;
   }
 
   .lg-menu__list-item--second-container {
@@ -91,6 +110,8 @@
     left: 0;
     width: 100%;
     background: var(--color-white);
+    visibility: hidden;
+    opacity: 0;
   }
 
   .lg-menu__list-item-second-wrapper {
@@ -103,9 +124,11 @@
   .lg-menu__list-item--second {
     padding: 0.625rem 0;
     font-weight: bold;
+    display: block;
   }
 
   .lg-menu-list--third {
     padding: 0;
+    display: block;
   }
 }
