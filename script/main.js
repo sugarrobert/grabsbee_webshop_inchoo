@@ -5,7 +5,8 @@
         menuBtn = document.getElementById('nav-menu-button'),
         menuListItem = document.querySelectorAll('.menu__list-item'),
         menuTitle = document.querySelectorAll('.nav-menu-title'),
-        secondMenuTitle = document.querySelectorAll('.nav-menu-title-second');
+        secondMenuTitle = document.querySelectorAll('.nav-menu-title-second'),
+        footerDetails = document.querySelectorAll('.footer__details');
 
   const midMQ = window.matchMedia('(max-width: 1023px)'),
         largeMq = window.matchMedia('(min-width: 1024px)');
@@ -45,32 +46,34 @@
 
   menuTitle.forEach(navTitle => {
     navTitle.addEventListener('click', () => {
-      menuTitle.forEach(element => {
+      if(navTitle.nextElementSibling.classList.contains('display-block')) {
+        navTitle.nextElementSibling.classList.toggle('display-block')
+      } else {
+        menuTitle.forEach(element => {
+          if(midMQ.matches) {   
+            element.nextElementSibling.classList.remove('display-block');
+          }
+        })
         if(midMQ.matches) {   
-          element.nextElementSibling.classList.remove('display-block');
+          navTitle.nextElementSibling.classList.add('display-block');
         }
-        if(largeMq.matches) {
-          element.nextElementSibling.classList.remove('active');
-        }
-      })
-      if(midMQ.matches) {   
-        navTitle.nextElementSibling.classList.add('display-block');
-      }
-      if(largeMq.matches) {
-        navTitle.nextElementSibling.classList.add('active');
       }
     })
   })
 
   secondMenuTitle.forEach(secNavTitle => {
     secNavTitle.addEventListener('click', (e) => {
-      secondMenuTitle.forEach(element => {
+      if(secNavTitle.nextElementSibling.classList.contains('display-block')) {
+        secNavTitle.nextElementSibling.classList.toggle('display-block')
+      } else {
+        secondMenuTitle.forEach(element => {
+          if(midMQ.matches) {   
+            element.nextElementSibling.classList.remove('display-block');
+          }
+        })
         if(midMQ.matches) {   
-          element.nextElementSibling.classList.remove('display-block');
+          secNavTitle.nextElementSibling.classList.add('display-block');
         }
-      })
-      if(midMQ.matches) {   
-        secNavTitle.nextElementSibling.classList.add('display-block');
       }
     }) 
   });  
@@ -90,8 +93,8 @@
     e.stopPropagation();
   })
 
-  document.body.addEventListener('click', (e) => {
-        
+  //close cart, search
+  document.body.addEventListener('click', (e) => {   
     if(cartBtn.nextElementSibling.classList.contains('active')) {
       ui.close('cart-wrapper', 'active');
     };
@@ -101,35 +104,14 @@
     if(menuBtn.nextElementSibling.classList.contains('active')) {
       ui.close('menu-wrapper', 'active');
     };
-    menuListItem.forEach(item => {
-      if(item.nextElementSibling.classList.contains('active')) {
-        let wraper = document.querySelectorAll('.menu__list-item--second-container') 
-        wraper.forEach(item => {
-          item.classList.remove('active')
-        })
-      }
-    });
   });
 
-  //close details in footer in mob layout open it on deskop layout
-  function footerDetails() {
-    const details = document.querySelectorAll('.footer__details');
-    
-    details.forEach(details => {
-      if(midMQ.matches) {   
-        details.open = false;
-      }
-  
-      if(largeMq.matches) {
-        details.open = true;
-        details.addEventListener('click', (e) => {
-          e.preventDefault();
-        })
-      } 
-    })
-  }; 
+  //close details in footer in mob layout, open it and disable it on tablet layout
+  ui.detailsStatus(footerDetails);
 
-  footerDetails();
+  window.addEventListener('resize', () => {
+    ui.detailsStatus(footerDetails);
+  });
 })();
 
 

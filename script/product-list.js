@@ -16,10 +16,14 @@
 
   shopingOptionsTitle.forEach(navTitle => {
     navTitle.addEventListener('click', () => {
-      shopingOptionsTitle.forEach(element => {  
-        element.nextElementSibling.classList.add('visualy-hidden');
-      });
-      navTitle.nextElementSibling.classList.remove('visualy-hidden');
+      if(!navTitle.nextElementSibling.classList.contains('visualy-hidden')) {
+        navTitle.nextElementSibling.classList.toggle('visualy-hidden')
+      } else {
+        shopingOptionsTitle.forEach(element => {  
+          element.nextElementSibling.classList.add('visualy-hidden');
+        });
+        navTitle.nextElementSibling.classList.remove('visualy-hidden');
+      }
     });
   });
 
