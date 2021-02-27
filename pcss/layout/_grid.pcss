@@ -69,10 +69,20 @@
   }
 
   @media (--large) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr)
   }
 
   @media (min-width: 1400px) {
     grid-template-columns: repeat(4, 1fr)
   }
+}
+
+.product__grid-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.25rem 0.625rem;
 }

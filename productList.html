@@ -16,219 +16,250 @@
 
         <ul class="header__drawers-list">
           <li class="header__drawers-list__item">
-            <button class="button--no-styles header__buttons">
+            <button class="button--no-styles header__buttons"  id="nav-search-btn">
               <span class="icon-search"></span>
               <span class="visualy-hidden">Search From Trigger</span>
             </button>
 
-            <div class="visualy-hidden">
-              <form>
-                <fieldset>
-                  <legend tabindex="0">Grabsee search form</legend>
-                  <label tabindex="0" for="search"
+            <div class="search-wrapper container" id="search-wrapper">
+              <form class="search-form">
+                <fieldset class="search-fieldset">
+                  <legend tabindex="0" class="visualy-hidden">Grabsee search form</legend>
+                  <label tabindex="0" for="search" class="visualy-hidden"
                     >Enter here your search term</label
                   >
                   <input
                     name="search"
                     type="search"
-                    placeholder="Enter here your search term"
-                    aria-label="Search through site content"
+                    placeholder="Enter here your search term" autocomplete="off"
+                    aria-label="Search through site content" class="input search-input"
                   />
-                  <button>Search it</button>
+                  <button class=""><span class="icon-search"></span></button>
                 </fieldset>
               </form>
 
-              <button>Close</button>
+              <button class="close-button search-close-btn" id="nav-close-button">Close <span class="icon-x-circle close-button__append search-close-btn__append"></span></button>
             </div>
           </li>
+          
           <li class="header__drawers-list__item">
-            <button class="button--no-styles header__buttons">
+            <button class="button--no-styles header__buttons nav-cart-button" id="nav-cart-button">
               <span class="icon-shopping-cart"></span>
               <span class="visualy-hidden">Cart</span>
             </button>
 
-            <section class="visualy-hidden">
-              <header>
-                <p># item in Cart</p>
-              </header>
+            <section class="container cart-wrapper" id="cart-wrapper">
+              <h2 class="menu-title cart-title"># item in Cart</h2>
+              
+              <button class="close-button" id="nav-cart-close-button">Close <span class="icon-x-circle close-button__append"></span></button>
+        
+              <ol class="list-template-layout">
+                <p class="cart-recently-added">Recently added items</p>
 
-              <ol>
-                <li>
-                  <div>
-                    <img src="" alt="Item name 1" />
+                <li class="cart-list__item">
+                  <div class="cart-list__item--img">
+                    <img src="/assets/img/home-page/cart/black.jpg" alt="Item name 1" />
                   </div>
 
-                  <div>
-                    <h2>
-                      <a href="">Item name 1</a>
+                  <div class="cart-list__item--wraper">
+                    <h2 class="cart-list__item--title">
+                      <a href="" class="cart-list__item--title__link">Innova Pulsar | Major League Ultimate ...</a>
                     </h2>
 
-                    <dl>
-                      <dt tabindex="0">Color</dt>
-                      <dd tabindex="0">Black</dd>
-                      <dt tabindex="0">Price</dt>
-                      <dd tabindex="0">10$</dd>
-                      <dt tabindex="0">Qty:</dt>
+                    <dl class="cart-list__second">
+                      <dt tabindex="0" class="cart-list__second-item">Color:</dt>
+                      <dd tabindex="0" class="cart-list__second-item-description">Black</dd>
+                      <dt tabindex="0" class="cart-list__second-item">Price:</dt>
+                      <dd tabindex="0" class="cart-list__second-item-description">21.99$</dd>
+                      <dt tabindex="0" class="cart-list__second-item">Qty:</dt>
                       <dd>
                         <form>
                           <fieldset>
-                            <legend>Item qty control</legend>
+                            <legend class="visualy-hidden">Item qty control</legend>
                             <label for="qty"></label>
-                            <input name="qty" type="number" />
+                            <input name="qty" type="number" class="number"/>
                           </fieldset>
                         </form>
                       </dd>
                     </dl>
                   </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="" alt="Item name 2" />
-                  </div>
-
-                  <div>
-                    <h2>
-                      <a href="">Item name 2</a>
-                    </h2>
-
-                    <dl>
-                      <dt tabindex="0">Color</dt>
-                      <dd tabindex="0">Red</dd>
-                      <dt tabindex="0">Price</dt>
-                      <dd tabindex="0">12$</dd>
-                      <dt tabindex="0">Qty:</dt>
-                      <dd>
-                        <form>
-                          <fieldset>
-                            <legend>Item qty control</legend>
-                            <label for="qty"></label>
-                            <input name="qty" type="number" />
-                          </fieldset>
-                        </form>
-                      </dd>
-                    </dl>
+                  <div class="cart-action">
+                    <span class="icon-edit cart-action-icon"></span>
+                    <span class="icon-trash cart-action-icon"></span>
                   </div>
                 </li>
               </ol>
 
-              <table>
-                <caption>
+              <table class="cart-table">
+                <caption class="visualy-hidden">
                   Your Cart Totals table
                 </caption>
                 <tbody>
-                  <tr>
-                    <th tabindex="0">Subtotal</th>
-                    <td tabindex="0">$$</td>
+                  <tr class="cart-table__list">
+                    <th tabindex="0" class="cart-table__list-th">Cart Subtotal</th>
+                    <td tabindex="0" class="cart-table__list-td">$49.99</td>
                   </tr>
                 </tbody>
               </table>
 
-              <div>
-                <button>Proceed to checkout</button>
-                <a href="" title="Back to Cart page">View and edit cart</a>
+              <div class="cart-checkout">
+                <button class="button button--primary button--large">Proceed to checkout</button>
+                <a href="" title="Back to Cart page" class="edit-cart-link">View and edit cart</a>
               </div>
 
-              <div>
-                <strong>You have no items in your shopping cart</strong>
+              <div class="visualy-hidden">
+                <strong class="menu-title cart-title">You have no items in your shopping cart</strong>
               </div>
             </section>
           </li>
+          
           <li class="header__drawers-list__item">
-            <button class="button--no-styles header__buttons">
-              <span class="icon-menu"></span>
+            <button class="button--no-styles header__buttons" id="nav-menu-button">
+              <span class="icon-menu visualy-hidden--desktop"></span>
               <span class="visualy-hidden">Navigation Trigger</span>
             </button>
 
-            <nav class="visualy-hidden">
-              <ul>
+            <nav class="container menu-wrapper lg-menu-wrapper" id="menu-wrapper">
+              <h2 tabindex="0" class="menu-title visualy-hidden--desktop">Menu</h2>
+              <ul class="menu__list lg-menu__list">
                 <li>
-                  <h2>Frisbees</h2>
+                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Frisbees</h2>
 
-                  <div>
-                    <h3 tabindex="0">Ultimate Frisbees</h3>
+                  <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container"> 
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Ultimate Frisbees</h3>
 
-                    <ul>
-                      <li><a href="">Innova Pulsar</a></li>
-                      <li><a href="">Xcom</a></li>
-                      <li><a href="">Aviator - Marvel Captian America</a></li>
-                    </ul>
-                  </div>
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Innova Pulsar</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Xcom</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
+                      </ul>
+                    </div>
 
-                  <div>
-                    <h3 tabindex="0">Recreational</h3>
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Recreational</h3>
 
-                    <ul>
-                      <li><a href="">Nite</a></li>
-                      <li><a href="">Yikin</a></li>
-                    </ul>
-                  </div>
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Nite</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Yikin</a></li>
+                      </ul>
+                    </div>
 
-                  <div>
-                    <h3>Contact us</h3>
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
 
-                    <ul>
-                      <li tabindex="0">Trg Slobode 6</li>
-                      <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-                      <li>
-                        <a href="mailto:filip.svetlicic@gmail.com"
-                          >filip.svetlicic@gmail.com</a
-                        >
-                      </li>
-                    </ul>
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
+                        <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
+                        <li class="menu__list-item--third">
+                        <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>  
+                </li>
+                <li>
+                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Clothing</h2>
+
+                  <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container">
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Men's</h3>
+
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Sweatpants</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Shorts</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">T-Shirts</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Womens </h3>
+
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">T-Shirts & Tops</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Sport Bras</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Shorts</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
+
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
+                        <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
+                        <li class="menu__list-item--third">
+                        <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
                 <li>
-                  <h2>Clothing</h2>
+                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Accessories</h2>
 
-                  <div>
-                    <h3 tabindex="0">Ultimate Frisbees</h3>
+                  <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container">
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Gloves</h3>
 
-                    <ul>
-                      <li><a href="">Innova Pulsar</a></li>
-                      <li><a href="">Xcom</a></li>
-                      <li><a href="">Aviator - Marvel Captian America</a></li>
-                    </ul>
-                  </div>
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Fricton gloves</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Club ultimate gloves</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Mint Cutter Gloves</a></li>
+                      </ul>
+                    </div>
 
-                  <div>
-                    <h3>Recreational</h3>
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Bags</h3>
 
-                    <ul>
-                      <li><a href="">Nite</a></li>
-                      <li><a href="">Yikin</a></li>
-                    </ul>
-                  </div>
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Greatest ultimate frisbee bag 60L</a></li>
+                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Greatest ultimate frisbee bag 45L</a></li>
+                      </ul>
+                    </div>
 
-                  <div>
-                    <h3 tabindex="0">Contact us</h3>
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
 
-                    <ul>
-                      <li tabindex="0">Trg Slobode 6</li>
-                      <li><a href="tel:+385958811630">+385 95 8811630</a></li>
-                      <li>
-                        <a href="mailto:filip.svetlicic@gmail.com"
-                          >filip.svetlicic@gmail.com</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
+                        <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
+                        <li class="menu__list-item--third">
+                        <a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div> 
                 </li>
                 <li>
-                  <h2>Accessories</h2>
-                </li>
-                <li>
-                  <h2>Contact us</h2>
+                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Contact us</h2>
+
+                  <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container">
+
+                    <div class="lg-menu__list-item-second-wrapper">
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
+
+                      <ul class="menu__list--third lg-menu-list--third">
+                        <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
+                        <li class="menu__list-item--third"><a href="tel:+385958811630" class="menu__list-item--third-link"><span class="icon-phone menu__list-item-icon"></span> +385 95 8811630</a></li>
+                        <li class="menu__list-item--third"><a href="mailto:filip.svetlicic@gmail.com" class="menu__list-item--third-link"><span class="icon-mail menu__list-item-icon"></span> filip.svetlicic@gmail.com</a></li>
+                      </ul>
+                    </div>
+                  </div> 
                 </li>
               </ul>
 
-              <button>Close Nav</button>
+              <button class="close-button visualy-hidden--desktop">Close <span class="icon-x-circle close-button__append"></span></button>
             </nav>
           </li>
         </ul>
       </div>  
     </header>
 
-    <div class="container product-list__container-grid">
+    <div class="container product-list__container-grid product-list__container">
       <main class="product-list__container-grid main-container-grid">
         <nav class="lg-nav__breadcrumb-grid">
           <ul class="breadcrumb" aria-label="breadcrumb">
@@ -249,7 +280,7 @@
         <h1 class="product-list__title lg-product-list__title-grid">Ultimate Frisbees</h1>
 
         <section class="lg-product-list__grid-wrapper">
-          <button class="button button--secondary visualy-hidden--desktop">Shop by <span class="icon-plus-circle"></span></button>
+          <button class="button button--secondary visualy-hidden--desktop" id="shop-by-btn">Shop by <span class="icon-plus-circle"></span></button>
 
           <div class="shopping-filter visualy-hidden--desktop">
             <p tabindex="0" class="shopping-filter__title">Now shopping by</p>
@@ -262,8 +293,8 @@
 
           <div class="toolbar">
             <div class="toolbar__icons">
-              <li class="toolbar__icons__item"><button title="Grid View" class="button button--primary toolbar__button"><span class="icon-grid"></span></button></li>
-              <li class="toolbar__icons__item"><button title="List View" class="button button--secondary toolbar__button"><span class="icon-list"></span></button></li>
+              <li class="toolbar__icons__item"><button title="Grid View" class="button button--primary toolbar__button" id="grid-button"><span class="icon-grid"></span></button></li>
+              <li class="toolbar__icons__item"><button title="List View" class="button button--secondary toolbar__button" id="list-button"><span class="icon-list"></span></button></li>
             </div>
 
             <div>
@@ -276,174 +307,198 @@
             </div>
           </div>
 
-          <ul class="product__grid">
-            <li class="product__item">
+          <ul class="product__grid" id="product-list-container">
+            <li class="product__item product__item-grid" >
               <picture>
-                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+                <img class="product__img-grid" src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
               </picture>
               
-              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+              <div class="product__item-details product__item-details-grid">
+                <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-              <div class="rating rating__summary">
-                <div class=""></div>
-                <p class="">(#)</p>
+                <div class="rating rating__summary">
+                  <div class=""></div>
+                  <p class="">(#)</p>
+                </div>
+
+                <p class="price">As low as <strong>$21.99</strong></p>
+
+                <div class="product__item-action">
+                  <form action="">
+                    <input type="hidden" name="product" value="">
+                    <button type="submit" class="button hover-me button--primary">Add to Cart</button>
+                  </form>
+
+                  <ul class="product__item-icons-wrap">
+                    <li>
+                        <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                    </li>
+                    <li>
+                        <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <p class="price">As low as <strong>$21.99</strong></p>
-
-              <form action="">
-                <input type="hidden" name="product" value="">
-                <button type="submit" class="button button--primary">Add to Cart</button>
-              </form>
-
-              <ul class="product__item-icons-wrap">
-                <li>
-                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
-                </li>
-                <li>
-                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
-                </li>
-              </ul>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item-grid" >
               <picture>
-                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+                <img class="product__img-grid" src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
               </picture>
               
-              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+              <div class="product__item-details product__item-details-grid">
+                <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-              <div class="rating rating__summary">
-                <div class=""></div>
-                <p class="">(#)</p>
+                <div class="rating rating__summary">
+                  <div class=""></div>
+                  <p class="">(#)</p>
+                </div>
+
+                <p class="price">As low as <strong>$21.99</strong></p>
+
+                <div class="product__item-action">
+                  <form action="">
+                    <input type="hidden" name="product" value="">
+                    <button type="submit" class="button button--primary">Add to Cart</button>
+                  </form>
+
+                  <ul class="product__item-icons-wrap">
+                    <li>
+                        <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                    </li>
+                    <li>
+                        <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <p class="price">As low as <strong>$21.99</strong></p>
-
-              <form action="">
-                <input type="hidden" name="product" value="">
-                <button type="submit" class="button button--primary">Add to Cart</button>
-              </form>
-
-              <ul class="product__item-icons-wrap">
-                <li>
-                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
-                </li>
-                <li>
-                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
-                </li>
-              </ul>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item-grid" >
               <picture>
-                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+                <img class="product__img-grid" src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
               </picture>
               
-              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+              <div class="product__item-details product__item-details-grid">
+                <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-              <div class="rating rating__summary">
-                <div class=""></div>
-                <p class="">(#)</p>
+                <div class="rating rating__summary">
+                  <div class=""></div>
+                  <p class="">(#)</p>
+                </div>
+
+                <p class="price">As low as <strong>$21.99</strong></p>
+
+                <div class="product__item-action">
+                  <form action="">
+                    <input type="hidden" name="product" value="">
+                    <button type="submit" class="button button--primary">Add to Cart</button>
+                  </form>
+
+                  <ul class="product__item-icons-wrap">
+                    <li>
+                        <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                    </li>
+                    <li>
+                        <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <p class="price">As low as <strong>$21.99</strong></p>
-
-              <form action="">
-                <input type="hidden" name="product" value="">
-                <button type="submit" class="button button--primary">Add to Cart</button>
-              </form>
-
-              <ul class="product__item-icons-wrap">
-                <li>
-                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
-                </li>
-                <li>
-                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
-                </li>
-              </ul>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item-grid" >
               <picture>
-                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+                <img class="product__img-grid" src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
               </picture>
               
-              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+              <div class="product__item-details product__item-details-grid">
+                <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-              <div class="rating rating__summary">
-                <div class=""></div>
-                <p class="">(#)</p>
+                <div class="rating rating__summary">
+                  <div class=""></div>
+                  <p class="">(#)</p>
+                </div>
+
+                <p class="price">As low as <strong>$21.99</strong></p>
+
+                <div class="product__item-action">
+                  <form action="">
+                    <input type="hidden" name="product" value="">
+                    <button type="submit" class="button button--primary">Add to Cart</button>
+                  </form>
+
+                  <ul class="product__item-icons-wrap">
+                    <li>
+                        <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                    </li>
+                    <li>
+                        <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <p class="price">As low as <strong>$21.99</strong></p>
-
-              <form action="">
-                <input type="hidden" name="product" value="">
-                <button type="submit" class="button button--primary">Add to Cart</button>
-              </form>
-
-              <ul class="product__item-icons-wrap">
-                <li>
-                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
-                </li>
-                <li>
-                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
-                </li>
-              </ul>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item-grid" >
               <picture>
-                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+                <img class="product__img-grid" src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
               </picture>
               
-              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+              <div class="product__item-details product__item-details-grid">
+                <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-              <div class="rating rating__summary">
-                <div class=""></div>
-                <p class="">(#)</p>
+                <div class="rating rating__summary">
+                  <div class=""></div>
+                  <p class="">(#)</p>
+                </div>
+
+                <p class="price">As low as <strong>$21.99</strong></p>
+
+                <div class="product__item-action">
+                  <form action="">
+                    <input type="hidden" name="product" value="">
+                    <button type="submit" class="button button--primary">Add to Cart</button>
+                  </form>
+
+                  <ul class="product__item-icons-wrap">
+                    <li>
+                        <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                    </li>
+                    <li>
+                        <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <p class="price">As low as <strong>$21.99</strong></p>
-
-              <form action="">
-                <input type="hidden" name="product" value="">
-                <button type="submit" class="button button--primary">Add to Cart</button>
-              </form>
-
-              <ul class="product__item-icons-wrap">
-                <li>
-                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
-                </li>
-                <li>
-                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
-                </li>
-              </ul>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item-grid" >
               <picture>
-                <img src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
+                <img class="product__img-grid" src="/assets/img/produc-list/product-item-img/black.jpg" alt="picture_1" />
               </picture>
               
-              <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
+              <div class="product__item-details product__item-details-grid">
+                <h2><a href="/productPage.html" class="product__item-title">INNOVA PULSAR</a></h2>
 
-              <div class="rating rating__summary">
-                <div class=""></div>
-                <p class="">(#)</p>
+                <div class="rating rating__summary">
+                  <div class=""></div>
+                  <p class="">(#)</p>
+                </div>
+
+                <p class="price">As low as <strong>$21.99</strong></p>
+
+                <div class="product__item-action">
+                  <form action="">
+                    <input type="hidden" name="product" value="">
+                    <button type="submit" class="button button--primary">Add to Cart</button>
+                  </form>
+
+                  <ul class="product__item-icons-wrap">
+                    <li>
+                        <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
+                    </li>
+                    <li>
+                        <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <p class="price">As low as <strong>$21.99</strong></p>
-
-              <form action="">
-                <input type="hidden" name="product" value="">
-                <button type="submit" class="button button--primary">Add to Cart</button>
-              </form>
-
-              <ul class="product__item-icons-wrap">
-                <li>
-                    <a href="" title="Add to wishlist" class="product__item-icons"><span class="icon-heart"></span></a>
-                </li>
-                <li>
-                    <a href="" title="Add to Compare" class="product__item-icons"><span class="icon-bar-chart"></span></a>
-                </li>
-              </ul>
             </li>
           </ul>
 
@@ -467,61 +522,60 @@
         </section>
       </main>
 
-      <aside class="visualy-hidden absolute-wrapper product-options-wrapper aside-container-grid">
-        <div>
-          <h2 h2tabindex="0" class="menu-title lg-product-options__title">Shopping Options</h2>
+      <aside class="product-options-wrapper aside-container-grid" id="product-options-wrapper">
+        <h2 h2tabindex="0" class="menu-title lg-product-options__title">Shopping Options</h2>
 
-          <button class="close-button visualy-hidden--desktop">Close <span class="icon-x-circle"></span></button>
+        <button class="close-button visualy-hidden--desktop">Close <span class="icon-x-circle close-button__append"></span></button>
 
-          <dl class="menu__list">
-            <dt class="menu__list-item">Color</dt>
-            <dd>
-              <ul class="menu__list--second">
-                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Black</a></li>
-                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Orange</a></li>
-                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Blue</a></li>
-                <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">White</a></li>
-              </ul>
-            </dd>
-            <dt class="menu__list-item">Size</dt>
-            <dd>
-              <ul class="menu__list--second">
-                <li class="menu__list-item--second">
-                    <input type="checkbox" id="size_s" name="size_s" class="checkbox">
-                    <label for="size_s">S</label>
-                </li>
-                <li class="menu__list-item--second">
-                    <input type="checkbox" id="size_m" name="size_m" class="checkbox">
-                    <label for="size_m">M</label>
-                </li>
-                <li class="menu__list-item--second">
-                    <input type="checkbox" id="size_l" name="size_l" class="checkbox">
-                    <label for="size_l">L</label>
-                </li>
-              </ul>
-            </dd>
-            <dt class="menu__list-item">Material</dt>
-            <dd>
-              <ul class="menu__list--second">
-                <li class="menu__list-item--second">
-                    <input type="checkbox" id="material_pvc" name="material_pvc" class="checkbox">
-                    <label for="material_pvc">Strong PVC</label>
-                </li>
-                <li class="menu__list-item--second">
-                    <input type="checkbox" id="material_composit" name="material_composit" class="checkbox">
-                    <label for="material_composit">Carbon</label>
-                </li>
-              </ul>
-            </dd>
-            <dt class="menu__list-item">Price</dt>
-            <dd class="menu__list-item--second">
-              <input type="range" id="price_range" name="price_range" class="range">
-              <label for="price_range">Select price range</label>
-            </dd>
-          </dl>
-        </div>
+        <dl class="menu__list">
+          <dt class="menu__list-item shopping-options-title">Color</dt>
+          <dd class="">
+            <ul class="menu__list--second">
+              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Black</a></li>
+              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Orange</a></li>
+              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">Blue</a></li>
+              <li class="menu__list-item--second"><a href="#" class="menu__list-item--second-link">White</a></li>
+            </ul>
+          </dd>
+          <dt class="menu__list-item shopping-options-title">Size</dt>
+          <dd class="visualy-hidden">
+            <ul class="menu__list--second">
+              <li class="menu__list-item--second">
+                  <input type="checkbox" id="size_s" name="size_s" class="checkbox">
+                  <label for="size_s">S</label>
+              </li>
+              <li class="menu__list-item--second">
+                  <input type="checkbox" id="size_m" name="size_m" class="checkbox">
+                  <label for="size_m">M</label>
+              </li>
+              <li class="menu__list-item--second">
+                  <input type="checkbox" id="size_l" name="size_l" class="checkbox">
+                  <label for="size_l">L</label>
+              </li>
+            </ul>
+          </dd>
+          <dt class="menu__list-item shopping-options-title">Material</dt>
+          <dd class="visualy-hidden">
+            <ul class="menu__list--second">
+              <li class="menu__list-item--second">
+                  <input type="checkbox" id="material_pvc" name="material_pvc" class="checkbox">
+                  <label for="material_pvc">Strong PVC</label>
+              </li>
+              <li class="menu__list-item--second">
+                  <input type="checkbox" id="material_composit" name="material_composit" class="checkbox">
+                  <label for="material_composit">Carbon</label>
+              </li>
+            </ul>
+          </dd>
+          <dt class="menu__list-item shopping-options-title">Price</dt>
+          <dd class="menu__list-item--second visualy-hidden">
+            <input type="range" id="price_range" name="price_range" class="range">
+            <label for="price_range">Select price range</label>
+          </dd>
+        </dl>
       </aside>
     </div>
+
     <footer class="footer">
       <section class="newsletter__content">
         <div class="container">
@@ -544,7 +598,7 @@
                 type="email"
                 class="input footer__input"
               />
-              <button class="button button--primary button--large" type="submit">
+              <button class="button button--primary footer-button" type="submit">
                 Subscibe
               </button>
             </fieldset>
@@ -553,13 +607,13 @@
       </section>
 
       <section class="summary__content">
-        <div class="container">
+        <div class="footer-container">
           <details class="footer__details">
             <summary class="footer__summary">
               <h2 class="footer__title footer__summary-title">Categories</h2>
             </summary>
 
-            <ul class="">
+            <ul class="footer__summary-list">
               <li>
                 <a class="summary__links" href="">Frisbee</a>
               </li>
@@ -580,18 +634,11 @@
               <h2 class="footer__title footer__summary-title">Contact us</h2>
             </summary>
 
-            <ul>
-              <li tabindex="0"><address class="summary__links">Trg Slobode 6</address></li>
-              <li>
-                <a class="summary__links" href="tel:+385958811630"
-                  >+385 95 8811630</a
-                >
-              </li>
-              <li>
-                <a
-                  class="summary__links"
-                  href="mailto:filip.svetlicic@gmail.com"
-                  >filip.svetlicic@gmail.com</a
+            <ul class="footer__summary-list">
+              <li tabindex="0" class=""><span class="icon-map-pin summary__links"></span> Trg Slobode 6</li>
+              <li class=""><a href="tel:+385958811630" class="summary__links"><span class="icon-phone "></span> +385 95 8811630</a></li>
+              <li class="">
+              <a href="mailto:filip.svetlicic@gmail.com" class="summary__links"><span class="icon-mail"></span> filip.svetlicic@gmail.com</a
                 >
               </li>
             </ul>
@@ -604,6 +651,10 @@
           >Copyright &reg; 2021 Grabsbee</small
         >
       </div>
-    </footer> 
+    </footer>
+
+    <script src="/script/ui.js"></script>
+    <script src="/script/product-list.js"></script>
+    <script src="/script/main.js"></script>
   </body>
 </html>

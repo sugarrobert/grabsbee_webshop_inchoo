@@ -74,17 +74,90 @@
 }
 
 .product__item {
-  width: 160px;
-  height: 357px;
-  @mixin flex column, center, center, nowrap;
   border: 1px solid #CFCFCF;
   box-sizing: border-box;
-  padding: 0.313rem 1.125rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 4px rgba(216, 119, 97, 0.05), 0px 6px 24px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+
+    .hover-me {
+      background-color: green;
+    }
+  }
+
+  @media(--large) {
+    padding: 1rem;
+  }
+}
+
+.product__img-grid {
+  width: 120px;
+  height: 147px;
+
+  @media(--large) {
+    width: 207px;
+    height: 239px;
+  }  
+}
+
+.product__img-list {
+  width: 117px;
+  height: 146px;
+
+  @media(--large) {
+    width: 215px;
+    height: 241px;
+  }  
+}
+
+.product__item-grid {
+  @mixin flex column, center, center, nowrap;
+  width: 160px;
+  height: 357px;
 
   @media(--large) {
     width: 239px;
     height: 504px;
   }
+}
+
+.product__item-list {
+  @mixin flex row, center, start, wrap;
+  width: 100%;
+}
+
+.product__item-details-grid {
+  @mixin flex column, center, center, nowrap;
+  padding: 0 2rem;
+  width: max-content;
+}
+
+.product__item-details-list {
+  @mixin flex column, start, start, nowrap;
+  padding: 0.625rem 0 0.625rem 1rem;
+
+  @media(--large) {
+    padding-left: 2rem;
+  }
+}
+
+.product__item-action-list {
+  @mixin flex row, center;
 }
 
 .product__item-title {
@@ -95,9 +168,15 @@
   color: var(--secondary__color);
 }
 
+.price {
+  color: var(--primary__color);
+}
+
 .product__item-icons-wrap {
   display: flex;
-  padding: 0.313rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
 }
 
 .product__item-icons {
@@ -133,18 +212,30 @@
 }
 
 .product-options-wrapper {
-  max-width: 22.5rem;
+  @mixin absolute 0, 0, auto, auto;
+  background: var(--color-white);
+  width: 22.5rem;
+  visibility: hidden;
+  opacity: 0;
 
   @media(--large) {
     position: static;
     max-width: 20.563rem;
     margin: 0;
     padding: 0;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
 .lg-product-options__title {
   @media(--large) {
     padding: 1.25rem 0;
+  }
+}
+
+.product-list__container {
+  @media(--large) {
+    margin-top: 2.813rem;
   }
 }

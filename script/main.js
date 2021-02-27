@@ -91,7 +91,6 @@
   })
 
   document.body.addEventListener('click', (e) => {
-    e.preventDefault();
         
     if(cartBtn.nextElementSibling.classList.contains('active')) {
       ui.close('cart-wrapper', 'active');
@@ -123,6 +122,9 @@
   
       if(largeMq.matches) {
         details.open = true;
+        details.addEventListener('click', (e) => {
+          e.preventDefault();
+        })
       } 
     })
   }; 
