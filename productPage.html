@@ -10,9 +10,9 @@
   <body>
     <header class="header">
       <div class="container header__content">
-        <h1 class="logo">
+        <a href="./index.html" class="logo">
           <img src="/assets/img/grabsbee.svg" alt="Grabsee Webshop logo" class="logo__img">
-        </h1>
+        </a>
 
         <ul class="header__drawers-list">
           <li class="header__drawers-list__item">
@@ -53,7 +53,7 @@
               
               <button class="close-button" id="nav-cart-close-button">Close <span class="icon-x-circle close-button__append"></span></button>
         
-              <ol class="list-template-layout">
+              <ol class="list-template-layout" id="list-template-layout">
                 <p class="cart-recently-added">Recently added items</p>
 
                 <li class="cart-list__item">
@@ -84,8 +84,8 @@
                     </dl>
                   </div>
                   <div class="cart-action">
-                    <span class="icon-edit cart-action-icon"></span>
-                    <span class="icon-trash cart-action-icon"></span>
+                    <span tabindex="0" class="icon-edit cart-action-icon"></span>
+                    <span tabindex="0" class="icon-trash cart-action-icon"></span>
                   </div>
                 </li>
               </ol>
@@ -123,16 +123,16 @@
               <h2 tabindex="0" class="menu-title visualy-hidden--desktop">Menu</h2>
               <ul class="menu__list lg-menu__list">
                 <li>
-                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Frisbees</h2>
+                  <h2 tabindex="0" class="menu__list-item lg-menu__list-item nav-menu-title">Frisbees</h2>
 
                   <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container"> 
                     <div class="lg-menu__list-item-second-wrapper">
                       <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Ultimate Frisbees</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Innova Pulsar</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Xcom</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Innova Pulsar</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Xcom</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Aviator - Marvel Captian America</a></li>
                       </ul>
                     </div>
 
@@ -140,8 +140,8 @@
                       <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Recreational</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Nite</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Yikin</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Nite</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Yikin</a></li>
                       </ul>
                     </div>
 
@@ -160,31 +160,31 @@
                   </div>  
                 </li>
                 <li>
-                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Clothing</h2>
+                  <h2 tabindex="0" class="menu__list-item lg-menu__list-item nav-menu-title">Clothing</h2>
 
                   <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container">
                     <div class="lg-menu__list-item-second-wrapper">
                       <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Men's</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Sweatpants</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Shorts</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">T-Shirts</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Sweatpants</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Shorts</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">T-Shirts</a></li>
                       </ul>
                     </div>
 
                     <div class="lg-menu__list-item-second-wrapper">
-                      <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Womens </h3>
+                      <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Womens</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">T-Shirts & Tops</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Sport Bras</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Shorts</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">T-Shirts & Tops</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Sport Bras</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Shorts</a></li>
                       </ul>
                     </div>
 
                     <div class="lg-menu__list-item-second-wrapper">
-                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Contact us</h3>
+                      <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Contact us</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
                         <li tabindex="0" class="menu__list-item--third-link"><span class="icon-map-pin menu__list-item-icon"></span> Trg Slobode 6</li>
@@ -198,16 +198,16 @@
                   </div>
                 </li>
                 <li>
-                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Accessories</h2>
+                  <h2 tabindex="0" class="menu__list-item lg-menu__list-item nav-menu-title">Accessories</h2>
 
                   <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container">
                     <div class="lg-menu__list-item-second-wrapper">
                       <h3 tabindex="0" class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span> Gloves</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Fricton gloves</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Club ultimate gloves</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Mint Cutter Gloves</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Fricton gloves</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Club ultimate gloves</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Mint Cutter Gloves</a></li>
                       </ul>
                     </div>
 
@@ -215,8 +215,8 @@
                       <h3 tabindex="0"class="menu__list-item--second lg-menu__list-item--second nav-menu-title-second"><span class="icon-plus-circle menu__list-item-icon visualy-hidden--desktop"></span>Bags</h3>
 
                       <ul class="menu__list--third lg-menu-list--third">
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Greatest ultimate frisbee bag 60L</a></li>
-                        <li class="menu__list-item--third"><a href="#" class="menu__list-item--third-link">Greatest ultimate frisbee bag 45L</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Greatest ultimate frisbee bag 60L</a></li>
+                        <li class="menu__list-item--third"><a href="./productPage.html" class="menu__list-item--third-link">Greatest ultimate frisbee bag 45L</a></li>
                       </ul>
                     </div>
 
@@ -235,7 +235,7 @@
                   </div> 
                 </li>
                 <li>
-                  <h2 class="menu__list-item lg-menu__list-item nav-menu-title">Contact us</h2>
+                  <h2 tabindex="0" class="menu__list-item lg-menu__list-item nav-menu-title">Contact us</h2>
 
                   <div class="menu__list-item--second-container lg-menu__list-item--second-container" id="menu__list-item--second-container">
 
@@ -260,19 +260,22 @@
     </header>
 
     <main class="container product-page-container">
-      <ul class="breadcrumb" aria-label="breadcrumb">
-        <li class="breadcrumb__item" aria-label="breadcrumb">
-            <a class="breadcrumb__link" href="#" title="Grabsee Home">Home</a>
-        </li>
-        <li>
+      <nav class="lg-nav__breadcrumb-grid">
+        <h2 class="visualy-hidden">Breadcrumbs</h2>
+        <ul class="breadcrumb" aria-label="breadcrumb">
+          <li class="breadcrumb__item" aria-label="breadcrumb">
+              <a class="breadcrumb__link" href="index.html" title="Grabsee Home">Home</a>
+          </li>
+          <li>
+            <span class="icon-chevron-right breadcrumb__vector"></span>
+          </li>
+          <li class="breadcrumb__item" aria-label="breadcrumb">
+              <a class="breadcrumb__link" href="productList.html" title="Grabsee Main Category">Freesbe</a>
+          </li>
           <span class="icon-chevron-right breadcrumb__vector"></span>
-        </li>
-        <li class="breadcrumb__item" aria-label="breadcrumb">
-            <a class="breadcrumb__link" href="#" title="Grabsee Main Category">Freesbe</a>
-        </li>
-        <span class="icon-chevron-right breadcrumb__vector"></span>
-        <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0"><strong>Ultimate Frisbee</strong></li>
-      </ul>
+          <li class="breadcrumb__item" aria-label="breadcrumb" aria-current="location" tabindex="0"><strong>Ultimate Frisbee</strong></li>
+        </ul>
+      </nav>
 
       <div class="product-page__wrapper">
         <div class="product-page__slider">
@@ -301,14 +304,14 @@
         <div class="product-page__info-wrapper">
           <h1 tabindex="0" class="product__title">Inova Pulsar | Major League Ultimate Championship 175 Gram Flying Disc Ultrasta</h1>
           <div class="product__stock">
-            <p class="product__stock-p">In Stock</p>
+            <p tabindex="0" class="product__stock-p">In Stock</p>
             <p class="product__stock-p sku"><strong>SKU</strong> WH12</p>
           </div>
-          <small class="product__review">Be the first to review this product</small>
+          <small tabindex="0" class="product__review">Be the first to review this product</small>
           
           <div class="price-box">
-            <span>As low as:</span>
-            <span><strong class="price">$21.99</strong></span>
+            <span tabindex="0">As low as:</span>
+            <span tabindex="0"><strong class="price">$21.99</strong></span>
           </div>
           
           <form class="product__form" id="product-form">
@@ -411,7 +414,7 @@
             products, discounts and more.
           </p>
 
-          <form action="">
+          <form>
             <fieldset>
               <legend class="visualy-hidden">Grabsee Newsletter Form</legend>
               <label class="visualy-hidden" for="newsletter" tabindex="0"
@@ -441,16 +444,16 @@
 
             <ul class="footer__summary-list">
               <li>
-                <a class="summary__links" href="">Frisbee</a>
+                <a class="summary__links" href="./productList.html">Frisbee</a>
               </li>
               <li>
-                <a class="summary__links" href="">Gear</a>
+                <a class="summary__links" href="./productList.html">Gear</a>
               </li>
               <li>
-                <a class="summary__links" href="">Accessories</a>
+                <a class="summary__links" href="./productList.html">Accessories</a>
               </li>
               <li>
-                <a class="summary__links" href="">Gifts</a>
+                <a class="summary__links" href="./productList.html">Gifts</a>
               </li>
             </ul>
           </details>

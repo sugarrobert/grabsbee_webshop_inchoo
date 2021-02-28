@@ -30,6 +30,7 @@
   color: var(--color-white);
   text-transform: uppercase;
   @mixin headings-font-size 1.5rem, 2.625rem, normal;
+  min-width: 200px;
 
   @media (--large) {
     @mixin headings-font-size 1.75rem, 3rem, normal;
@@ -86,6 +87,10 @@
   background: var(--primary-10);
   border-radius: 50%;
   margin: 0.313rem;
+}
+
+.active-elipse {
+  background: var(--secondary__color);
 }
 
 .featured-categorie {

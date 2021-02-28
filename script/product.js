@@ -7,6 +7,7 @@ function Product(name, color, price, sku, qty, details) {
   this.details = details;
 }
 
+//get all products form sesionStorage
 Product.prototype.getProduct = function() {
   let products;
   if(sessionStorage.getItem('products') === null) {
@@ -18,6 +19,7 @@ Product.prototype.getProduct = function() {
   return products;
 };
 
+//add product to sessionStorage
 Product.prototype.addProduct = function(product) {
   const products = this.getProduct();
 
@@ -26,4 +28,13 @@ Product.prototype.addProduct = function(product) {
   sessionStorage.setItem('products', JSON.stringify(products))
 };
 
-Product.prototype.displayProducts = function() {};
+//show product added to sessionStorage 
+Product.prototype.showProductInCart = function(element) {
+  const products = this.getProduct();
+
+  products.forEach(product => {
+    const ui = new UI();
+
+    ui.generateCartDOM(element, product);
+  });
+}

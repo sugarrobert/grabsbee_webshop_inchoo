@@ -2,8 +2,10 @@
   const mainImg = document.querySelector('.product-page__slider-main-img'),
         picture = document.querySelectorAll('.slider__list--img'),
         productDetails = document.querySelectorAll('.product__details'),
-        productDetailsItem = document.querySelectorAll('.product__details-item');
+        productDetailsItem = document.querySelectorAll('.product__details-item'),
+        form = document.getElementById('product-form');
 
+  // instantiate ui
   const ui = new UI();
   
   // change large image by clicking on small 
@@ -13,13 +15,15 @@
     })
   });
 
-  //product details event listeners(when one details is open close the secondone)
+  //product details event listeners(when one details is open close the second one)
   productDetails.forEach(details => {  
     details.addEventListener('click', (e) => {
-      productDetailsItem.forEach(item => {
-        item.classList.remove('active')
+      if(e.target.parentElement.classList.contains('product__details-summary')) {
+        productDetailsItem.forEach(item => {
+          item.classList.remove('active')
       })
       e.target.parentElement.nextElementSibling.classList.add('active');
+      }
     })
   });
 
@@ -30,37 +34,19 @@
     ui.detailsStatus(productDetails);
   });
 
-  const form = document.getElementById('product-form');
-
+  //add product with information to sessionStorage 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const name = document.querySelector('.product__title').innerHTML,
-          color = document.querySelectorAll('.input-color'),
+          color = 'Black',
           price = document.querySelector('.price').innerHTML,
           qty = document.querySelector('.qty').value,
           sku = document.querySelector('.sku').innerHTML.split(' ').slice(1).join(' ');
 
-    // console.log(name)
-    // console.log(price)
-    // console.log(qty)
-    // console.log(sku)
-
     const product = new Product();
-    const productItem = new Product(name, price, qty, sku);
+    const productItem = new Product(name, color, price, sku, qty);
 
     product.addProduct(productItem);
-
-    
-    // color.forEach((color, index) => {
-    //   console.log(index)
-
-    //   color.addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     color.select(index);
-    //   })
-    // })
-    
-  })  
-
+  });  
 })();

@@ -3,16 +3,17 @@
         cartBtn = document.getElementById('nav-cart-button'),
         searchBtn = document.getElementById('nav-search-btn'),
         menuBtn = document.getElementById('nav-menu-button'),
-        menuListItem = document.querySelectorAll('.menu__list-item'),
         menuTitle = document.querySelectorAll('.nav-menu-title'),
         secondMenuTitle = document.querySelectorAll('.nav-menu-title-second'),
         footerDetails = document.querySelectorAll('.footer__details');
 
-  const midMQ = window.matchMedia('(max-width: 1023px)'),
-        largeMq = window.matchMedia('(min-width: 1024px)');
+  const midMQ = window.matchMedia('(max-width: 1023px)');
   
+  // instantiate ui and product
   const ui = new UI();
+  const product = new Product();
 
+  //close menu when close btn is clicked
   closeBtn.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -23,13 +24,20 @@
     });
   })
   
+  //open cart and get all product from sessionStorage
   cartBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
 
+    const container = document.getElementById('list-template-layout')
+    container.innerHTML = '';
+
     ui.active('cart-wrapper', 'active');
+
+    product.showProductInCart(container);
   });
 
+  //open search window
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -37,6 +45,7 @@
     ui.active('search-wrapper', 'active');
   });
 
+  //open menu on mobile resolution
   menuBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -44,6 +53,7 @@
     ui.active('menu-wrapper', 'active');
   });
 
+  //toggle through menu on mobile resolution
   menuTitle.forEach(navTitle => {
     navTitle.addEventListener('click', () => {
       if(navTitle.nextElementSibling.classList.contains('display-block')) {
@@ -93,8 +103,7 @@
     e.stopPropagation();
   })
 
-  //close cart, search
-  document.body.addEventListener('click', (e) => {   
+  document.body.addEventListener('click', (e) => {    
     if(cartBtn.nextElementSibling.classList.contains('active')) {
       ui.close('cart-wrapper', 'active');
     };

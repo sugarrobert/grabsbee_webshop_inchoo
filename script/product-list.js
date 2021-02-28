@@ -8,12 +8,15 @@
         productItemDetails = document.querySelectorAll('.product__item-details'),
         productItemAction = document.querySelectorAll('.product__item-action');
 
+  // instantiate ui
   const ui = new UI();
 
+  //open filter options on mobile
   shopByBtn.addEventListener('click', () => {
     ui.active('product-options-wrapper', 'active');
   });
 
+  //filter accordion toggle options on click
   shopingOptionsTitle.forEach(navTitle => {
     navTitle.addEventListener('click', () => {
       if(!navTitle.nextElementSibling.classList.contains('visualy-hidden')) {
@@ -27,6 +30,7 @@
     });
   });
 
+  //change layout to grid on click
   gridBtn.addEventListener('click', (e) => {
     ui.switchClass(productListContainer, 'product__grid-list', 'product__grid');
 
@@ -41,6 +45,7 @@
     });
   });
 
+  //change layout to list on click
   listBtn.addEventListener('click', (e) => {
     ui.switchClass(productListContainer, 'product__grid', 'product__grid-list');
 
