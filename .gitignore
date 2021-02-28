@@ -1,4 +1,3 @@
-/package.json
 .DS_Store
-/css-build
-/style-guide.html
+/package.json
+/css-build/node_modules/*

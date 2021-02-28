@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Grabsee - your frisbee web store</title>
+  </head>
+
+  <body>
+    <button class="button button--large button--primary">Primary Mobile Large</button>
+    <button class="button button--primary">Primary Mobile</button>
+    <br>
+    <br>
+    <button class="button button--large button--secondary">Secondary Mobile Large <span class="icon-plus-circle"></span></button>
+    <button class="button button--secondary">Secondary Mobile <span class="icon-plus-circle"></span></button>
+    <br>
+    <br>
+    <button class="button  button--large button--primary--disabled">Primary Disebled Large</button>
+    <br>
+    <br>
+    <button class="button button--primary--disabled">Primary Disabled</button>
+    <br>
+    <br>
+    <button class="button button--secondary--disabled">Secondary Disabled <span class="icon-plus-circle"></span></button>
+    <br>
+    <br>
+    <form>
+        <input class="input"
+          name="search"
+          type="search"
+          placeholder="Enter here your search term"
+          aria-label="Search through site content"
+        />
+    </form>
+    <br>
+    <br>
+    <div class="limiter">
+      <label for="limiter" id="limiter">Show</label>
+      <select class="select" name="limiter" id="limiter">
+        <option value="4" selected>4</option>
+        <option value="8">8</option>
+        <option value="12">12</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <ul>
+      <li>
+          <input class="checkbox" type="checkbox" id="material_pvc" name="material_pvc">
+          <label for="material_pvc">Strong PVC</label>
+      </li>
+      <li>
+          <input class="checkbox" type="checkbox" id="material_composit" name="material_composit"><span class="icon-check"></span>
+          <label for="material_composit">Carbon</label>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <ul>
+      <li>
+          <input class="checkbox" type="checkbox" id="size_s" name="size_s">
+          <label for="size_s">S</label>
+      </li>
+      <li>
+          <input class="checkbox" type="checkbox" id="size_m" name="size_m">
+          <label for="size_m">M</label>
+      </li>
+      <li>
+          <input class="checkbox" type="checkbox" id="size_l" name="size_l">
+          <label for="size_l">L</label>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <div>
+      <label>Sort products by:</label>
+      <select class="select" type="select" name="sort-by" id="sort-by">
+        <option value="bestseller" selected>Bestseller</option>
+        <option value="price">Price</option>
+      </select>
+      <button title="Set direction"><span class="icon-arrow-down"></span></button>
+      <br>
+      <br>
+      <input class="input"
+      placeholder="Enter your email address"
+      name="newsletter"
+      type="email"
+    />
+    </div>
+  </body>
+</html>
